@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div id="cuerpoHeredado">
+   <div class="row">
+      <div class="col-md-9">
+         <h3>Historias Clinicas</h3>
+      </div>
+      <div class="col-md-3">
+         <a class="btn btn-default" href="{% url 'crear_historias_clinicas' %}">Nueva Historia</a>
+      </div>
+   </div>
+   <table class="table">
+      <tr>
+         <th>Cedula</th>
+         <th>Nombre</th>
+         <th>Apellido</th>
+         <th>Eliminar</th>
+      </tr>
+      {% for historia in historias %}
+         <tr>
+            <td><a href="{% url 'ver_historia_clinica' historia.pk %}">{{historia.paciente.cedula}}</a></td>
+            <td>{{historia.paciente.first_name}}</td>
+            <td>{{historia.paciente.last_name}}</td>
+            <td><a href="{% url 'eliminar_historia_clinica' historia.pk %}" style="color: red; font-weight: bolder;">x</a></td>
+         </tr>
+      {% endfor %}
+   </table>
+</div>
+
+{% endblock %}

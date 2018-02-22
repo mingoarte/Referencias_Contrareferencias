@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="cuerpoHeredado">
+  <center><h2>Mis Citas</h2></center>
+  <!-- Modal content -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Finalizar Consulta</h4>
+        </div>
+        <div class="modal-body">
+          <p>¿Está seguro que desea eliminar esta consulta?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <a type="button" class="btn btn-primary" href="{% url 'ver_citas' user.pk %}" > Aceptar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--  -->
+  <div id="show-appointments"><table>
+    <tr>
+      <th>Fecha</th>
+      {% if user.groups.all.0.name == 'medico' %}
+      <th>Paciente</th>
+      {% else %}
+      <th>Médico</th>
+      {% endif %}
+      <th>Institución</th>
+      <th>Descripción</th>
+      <th style="text-align: right">
+        <a id="add_appointment" href="{% url 'agregar_cita_paciente' user.pk %}">
+          <i class="fa fa-plus-circle" style="font-size:20px;color:white"></i>
+        </a>
+      </th>
+    </tr>
+    {% for a in appointments %}
+    <!-- Modal content -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Finalizar Consulta</h4>
+          </div>
+          <div class="modal-body">
+            <p>¿Está seguro que desea eliminar esta consulta?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <a type="button" class="btn btn-primary" href="{% url 'eliminar_cita' a.pk%}" > Aceptar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+      <tr>
+        <td>{{a.fecha}}</td>
+        {% if user.groups.all.0.name == 'medico' %}
+        <td>{{a.paciente.first_name}} {{a.paciente.last_name}}</td>
+        {% else %}
+        <td>{{a.medico.first_name}} {{a.medico.last_name}}</td>
+        {% endif %}
+        <td>{{a.institucion.name}}</td>
+        <td>{{a.descripcion}}</td>
+        <td style="text-align: right">
+          <a href="{% url 'modificar_cita_paciente' a.pk %}"><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
+          <a data-toggle="modal" data-target="#myModal" ><i class="fa fa-trash" style="font-size:20px;color:#5882FA"></i></a>
+        </td>
+      </tr>
+    {% endfor%}
+  </table></div>
+  </div>
+</div>
+{% endblock %}

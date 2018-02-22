@@ -1,0 +1,104 @@
+{% extends "base_m.html" %}
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery=1%}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+{% load static %}
+{% block content %}
+
+<div id="cuerpoHeredado">
+  <div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Finalizar Consulta</h4>
+          </div>
+          <div class="modal-body">
+            <p>¿Está seguro que desea finalizar esta consulta?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <a type="button" class="btn btn-primary" href="{% url 'ver_citas' user.pk %}" > Aceptar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="tab-content">
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+      <form action="{% url 'consulta' consulta.pk %}" method=POST>
+        {% csrf_token %}
+
+        <div class="col-md-4 row-md-5">
+          <br>
+          <br>
+          {% if paciente.fotosubida == False %}
+          <div class="col-md-17 ">
+          <br>
+          <br>
+          <br>
+          <br>
+          <img src="{% static 'assets/img/avatar.png' %}" class="avatar img-circle img-thumbnail" alt="avatar">
+          </div>
+          {% else %}
+          <img class='fotoPaciente' src="{{paciente.foto.url}}"  >
+          {% endif %}
+        </div>
+        <div class="form-group" id='pacientes'>
+          <label for="id_paciente">Paciente: </label>
+          <span>{{consulta.paciente.first_name}} {{consulta.paciente.last_name}}</span>
+        <label for="id_fechaCita">Cita: </label>
+        <span>{{consulta.fecha}}</span>
+        <label for="id_fechaCita">Institución: </label>
+        <span>{{consulta.institucion.name}}</span>
+        <label for="id_descripcion">Especialidad: </label>
+        <span>{{consulta.especialidad.nombre_especialidad}}</span>
+
+
+
+        </div>
+        {% if consulta.es_referido == True  %}
+        <a id= 'download' href="{{referencia.archivo.url}}" ><i class="fa fa-cloud-download"style="font-size:24px"></i>  Descargar Informe</a>
+        {% endif %}
+        </form>
+      {% buttons %}
+        <div class="col-md-3"></div>
+      <div class="col-sm-4 col-md-6 text-center">
+         {% if consulta.revision == False %}
+          <a name = "boton" id = 'revision' type="button" class="btn btn-info" href = "{% url 'comenzar_revision' consulta.id %}" >
+           Comenzar Revisión
+         </a>
+         {% endif %}
+
+         {% if consulta.revision == True %}
+         <a name = "boton" id = 'revision' type="button" class="btn btn-info" href = "{% url 'comenzar_revision' consulta.id %}" disabled>
+          Comenzar Revisión
+        </a>
+        {% endif %}
+
+         <!-- Trigger the modal with a button -->
+          <button type="button"  id = "finalizar" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Finalizar Consulta</button>
+          {% if consulta.revision == False %}
+          <a id = "atras" href="{% url 'ver_citas' user.pk %}" role = "button">&laquo; Regresar</a>
+        {% endif %}
+          <div class="col-md-3"></div>
+      {% endbuttons %}
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

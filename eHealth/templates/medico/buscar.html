@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id="">
+  <h1> Buscar</h1>
+</div>
+
+<br>
+<br>
+
+{% if paciente == True %}
+<h3> Resultados de búsqueda de Pacientes </h3>
+{% else %}
+<h3> Resultados de búsqueda de Médicos </h3>
+{%endif%}
+<br>
+<div>
+    <table id="search_result" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for user in result %}
+                <tr>
+                    <td>{{user.cedula}}</td>
+                    <td>{{user.first_name}}</td>
+                    <td>{{user.last_name}}</td>
+                    <td>{{user.usuario.user.email}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+   
+    <br>
+    <br>
+{% endblock %}

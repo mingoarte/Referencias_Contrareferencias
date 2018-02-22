@@ -1,0 +1,33 @@
+{% extends "base_m.html" %}
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery=1%}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+{% load static %}
+{% block content %}
+
+<div id="cuerpoHeredado">
+  <center><h2>Historial de Citas</h2></center>
+    <div id="show-consultations"><table>
+      <tr>
+        <th style="text-align: center;">Médico</th>
+        <th style="text-align: center;">Fecha</th>
+        <th style="text-align: center;">Institución</th>
+        <th style="text-align: center;">Especialidad</th>
+      </tr>
+      {% for h in historial %}
+        <tr style="text-align: center;">
+          <td>{{h.medico.first_name}} {{h.medico.last_name}}</td>
+          <td>{{h.fecha}}</td>
+          <td>{{h.institucion.name}}</td>
+          <td>{{h.especialidad}}</td>
+        </tr>
+      {% endfor%}
+    </table></div>
+  </div>
+{% endblock %}

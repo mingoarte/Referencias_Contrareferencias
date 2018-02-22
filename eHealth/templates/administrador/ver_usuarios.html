@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+  <div id="cuerpoHeredado">
+
+    <center><h1>Gestión de Usuarios</h1></center>
+    <div id="show-users"><table>
+      <tr>
+        <th style="text-align: center;">Cédula</th>
+        <th style="text-align: center;">Username</th>
+        <th style="text-align: center;">Nombre</th>
+        <th style="text-align: center;">Apellido</th>
+        <th style="text-align: center;">Email</th>
+        <th style="text-align: center;"> Rol </th>
+        <th></th>
+      </tr>
+      {% for user in usuarios %}
+
+      <!-- Modal content -->
+      <div class="modal fade" id="myModal" role="dialog">
+
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Eliminar Usuario</h4>
+          </div>
+          <div class="modal-body">
+            <p>¿Está seguro que desea eliminar este usuario?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <a type="button" class="btn btn-primary" href="{% url 'eliminar_usuario' user.pk %}" > Aceptar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+        <tr id="{{user.c}}">
+
+          <td style="text-align: center;">{{user.ci}}</td>
+          <td style="text-align: center;">{{user.user.username}}</td>
+          <td style="text-align: center;">{{user.user.first_name}}</td>
+          <td style="text-align: center;">{{user.user.last_name}}</td>
+          <td style="text-align: center;">{{user.user.email}}</td>
+          <td style="text-align: center;">{{user.user.groups.all.0.name}}</td>
+          <td style="text-align: center;">
+            <a href="{% url 'modificar_usuario' user.pk %}"><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
+            <a data-toggle="modal" data-target="#myModal" ><i class="fa fa-trash" style="font-size:20px;color:#5882FA"></i></a>
+
+          </td>
+        </tr>
+      {% endfor%}
+    </table></div>
+  </div>
+{% endblock %}
