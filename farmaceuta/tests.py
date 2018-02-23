@@ -53,23 +53,50 @@ class TestAgregarInstituciones(SeleniumTests):
         self.nombre = self.driver.find_element_by_css_selector("input[name='nombre']")
         self.direccion = self.driver.find_element_by_css_selector("input[name='direccion']")
         self.institucion = self.driver.find_element_by_css_selector("select[name='institucion']")
+        self.farmaceuta = self.driver.find_element_by_css_selector("select[name='farmaceuta']")
 
         self.rif.send_keys(u"1234567")
         self.nombre.send_keys(u"Farmacia 1")
         self.direccion.send_keys(u"Dirección Farmcia 1")
         Select(self.institucion).select_by_visible_text(u"Hospital1")
+        Select(self.farmaceuta).select_by_visible_text(u"Farmaceuta1")
         self.driver.find_element_by_css_selector("button[type='submit']").click()
         self.assertTrue(u"Farmacia 1" in self.driver.page_source)
 
 @unittest.skip("Verificada")
 class TestModificarInstituciones(SeleniumTests):
     def runTest(self):
-        self.open(reverse('modificar_institucion'))
+        self.open(reverse('agregar_farmacia'))
+        time.sleep(1)
+        self.rif = self.driver.find_element_by_css_selector("input[name='rif']")
+        self.nombre = self.driver.find_element_by_css_selector("input[name='nombre']")
+        self.direccion = self.driver.find_element_by_css_selector("input[name='direccion']")
+        self.institucion = self.driver.find_element_by_css_selector("select[name='institucion']")
+        self.farmaceuta = self.driver.find_element_by_css_selector("select[name='farmaceuta']")
+
+        self.rif.send_keys(u"1234567")
+        self.nombre.send_keys(u"Farmacia 1")
+        self.direccion.send_keys(u"Dirección Farmcia 1")
+        Select(self.institucion).select_by_visible_text(u"Hospital1")
+        Select(self.farmaceuta).select_by_visible_text(u"Farmaceuta1")
+        self.driver.find_element_by_css_selector("button[type='submit']").click()
+
 
 @unittest.skip("Verificada")
 class TestEliminarInstituciones(SeleniumTests):
     def runTest(self):
-        self.open(reverse('eliminar_institucion'))
+        self.open(reverse('agregar_farmacia'))
+        time.sleep(1)
+        self.rif = self.driver.find_element_by_css_selector("input[name='rif']")
+        self.nombre = self.driver.find_element_by_css_selector("input[name='nombre']")
+        self.direccion = self.driver.find_element_by_css_selector("input[name='direccion']")
+        self.institucion = self.driver.find_element_by_css_selector("select[name='institucion']")
+
+        self.rif.send_keys(u"1234567")
+        self.nombre.send_keys(u"Farmacia 1")
+        self.direccion.send_keys(u"Dirección Farmcia 1")
+        Select(self.institucion).select_by_visible_text(u"Hospital1")
+        self.driver.find_element_by_css_selector("button[type='submit']").click()
 
 if __name__ == '__main__':
     unittest.main()
