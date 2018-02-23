@@ -1735,3 +1735,1721 @@ Sandbox: Unexpected EOF, op 9 flags 00 path /dev/shm/org.chromium.QmHd8O
 [Child 32602, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 709
 [Child 32602, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 709
 [Child 32602, Chrome_ChildThread] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 22
+1519403326137	geckodriver	INFO	geckodriver 0.19.1
+1519403326144	geckodriver	INFO	Listening on 127.0.0.1:34889
+1519403327247	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.AF3F7Ez69SFV"
+1519403327696	Marionette	INFO	Enabled via --marionette
+1519403328836	Marionette	INFO	Listening on port 46311
+1519403328854	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[Child 4760, Chrome_ChildThread] WARNING: pipe error (18): Connection reset by peer: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1519403335303	geckodriver	INFO	geckodriver 0.19.1
+1519403335306	geckodriver	INFO	Listening on 127.0.0.1:44261
+1519403336412	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.FB2xDFn84XKo"
+1519403336898	Marionette	INFO	Enabled via --marionette
+1519403338049	Marionette	INFO	Listening on port 38599
+1519403338125	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+Sandbox: Unexpected EOF, op 0 flags 0302 path /dev/shm/org.chromium.ybljBZ
+[GFX1-]: Failed to lock new back buffer.
+[Child 4967, Chrome_ChildThread] WARNING: pipe error (20): Connection reset by peer: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x4E0001,name=PLayerTransaction::Msg_InitReadLocks) Channel error: cannot send/recv
+
+[Child 4967, Main Thread] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 22
+1519403395577	geckodriver	INFO	geckodriver 0.19.1
+1519403395580	geckodriver	INFO	Listening on 127.0.0.1:35373
+1519403396715	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.J7DQCegNatQg"
+1519403397198	Marionette	INFO	Enabled via --marionette
+1519403398364	Marionette	INFO	Listening on port 46061
+1519403398428	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1519403404710	geckodriver	INFO	geckodriver 0.19.1
+1519403404713	geckodriver	INFO	Listening on 127.0.0.1:33551
+1519403405839	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Ovd5S222dl36"
+1519403406311	Marionette	INFO	Enabled via --marionette
+1519403407486	Marionette	INFO	Listening on port 42009
+1519403407552	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1519403412801	geckodriver	INFO	geckodriver 0.19.1
+1519403412804	geckodriver	INFO	Listening on 127.0.0.1:35515
+1519403413928	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.lVVSiHHty2hj"
+1519403414412	Marionette	INFO	Enabled via --marionette
+1519403415559	Marionette	INFO	Listening on port 42147
+1519403415649	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[Child 5786, Chrome_ChildThread] WARNING: pipe error (21): Connection reset by peer: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1519403479296	geckodriver	INFO	geckodriver 0.19.1
+1519403479309	geckodriver	INFO	Listening on 127.0.0.1:58915
+1519403480457	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.g8jb9GfypXdw"
+1519403481120	Marionette	INFO	Enabled via --marionette
+1519403482417	Marionette	INFO	Listening on port 34837
+1519403482473	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403493895	geckodriver	INFO	geckodriver 0.19.1
+1519403493898	geckodriver	INFO	Listening on 127.0.0.1:55421
+1519403494997	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.wrLivZtnoGLh"
+1519403495474	Marionette	INFO	Enabled via --marionette
+1519403496558	Marionette	INFO	Listening on port 36129
+1519403496607	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403502049	geckodriver	INFO	geckodriver 0.19.1
+1519403502060	geckodriver	INFO	Listening on 127.0.0.1:36943
+1519403503174	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Hv24yfXzDIZd"
+1519403503661	Marionette	INFO	Enabled via --marionette
+1519403504758	Marionette	INFO	Listening on port 40537
+1519403504782	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403569178	geckodriver	INFO	geckodriver 0.19.1
+1519403569181	geckodriver	INFO	Listening on 127.0.0.1:55355
+1519403570289	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Y5Mb85t6FGht"
+1519403570756	Marionette	INFO	Enabled via --marionette
+1519403571999	Marionette	INFO	Listening on port 36805
+1519403572098	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403578397	geckodriver	INFO	geckodriver 0.19.1
+1519403578400	geckodriver	INFO	Listening on 127.0.0.1:54741
+1519403579511	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.V2Rqduy6Clpl"
+1519403579982	Marionette	INFO	Enabled via --marionette
+1519403581209	Marionette	INFO	Listening on port 36821
+1519403581221	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403586707	geckodriver	INFO	geckodriver 0.19.1
+1519403586710	geckodriver	INFO	Listening on 127.0.0.1:45551
+1519403587817	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.1hgxrCHyuxxj"
+1519403588285	Marionette	INFO	Enabled via --marionette
+1519403589471	Marionette	INFO	Listening on port 36105
+1519403589536	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403663482	geckodriver	INFO	geckodriver 0.19.1
+1519403663493	geckodriver	INFO	Listening on 127.0.0.1:49901
+1519403664609	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.qwDv7YnkNfoe"
+1519403665100	Marionette	INFO	Enabled via --marionette
+1519403666258	Marionette	INFO	Listening on port 38495
+1519403666340	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403677938	geckodriver	INFO	geckodriver 0.19.1
+1519403677942	geckodriver	INFO	Listening on 127.0.0.1:45123
+1519403679084	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.5gUeuXbxBPpB"
+1519403679584	Marionette	INFO	Enabled via --marionette
+1519403680649	Marionette	INFO	Listening on port 35641
+1519403680699	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403686006	geckodriver	INFO	geckodriver 0.19.1
+1519403686009	geckodriver	INFO	Listening on 127.0.0.1:37049
+1519403687115	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.N0jx8QP5zQfD"
+1519403687589	Marionette	INFO	Enabled via --marionette
+1519403688678	Marionette	INFO	Listening on port 46363
+1519403688725	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[Child 7756, Chrome_ChildThread] WARNING: pipe error (18): Connection reset by peer: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+Sandbox: Unexpected EOF, op 0 flags 0302 path /dev/shm/org.chromium.k7piIG
+[GFX1-]: Failed buffer for 0, 0, 1275, 1024
+[Child 7756, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 709
+1519403756520	geckodriver	INFO	geckodriver 0.19.1
+1519403756523	geckodriver	INFO	Listening on 127.0.0.1:56843
+1519403757628	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.8Kt9qntUUq2K"
+1519403758101	Marionette	INFO	Enabled via --marionette
+1519403759236	Marionette	INFO	Listening on port 40567
+1519403759336	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 8117, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 709
+1519403807623	geckodriver	INFO	geckodriver 0.19.1
+1519403807627	geckodriver	INFO	Listening on 127.0.0.1:39749
+1519403808734	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.LkGPGQ52a8ig"
+1519403809208	Marionette	INFO	Enabled via --marionette
+1519403810331	Marionette	INFO	Listening on port 34139
+1519403810354	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403832068	geckodriver	INFO	geckodriver 0.19.1
+1519403832071	geckodriver	INFO	Listening on 127.0.0.1:55669
+1519403833190	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.l3mzwdKjUUNG"
+1519403833644	Marionette	INFO	Enabled via --marionette
+1519403834779	Marionette	INFO	Listening on port 34013
+1519403834804	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403881010	geckodriver	INFO	geckodriver 0.19.1
+1519403881012	geckodriver	INFO	Listening on 127.0.0.1:43659
+1519403882119	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.sJbEJhcZrkVW"
+1519403882589	Marionette	INFO	Enabled via --marionette
+1519403883747	Marionette	INFO	Listening on port 37065
+1519403883837	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403932044	geckodriver	INFO	geckodriver 0.19.1
+1519403932047	geckodriver	INFO	Listening on 127.0.0.1:48591
+1519403933149	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.rCI9pbziE7vn"
+1519403933636	Marionette	INFO	Enabled via --marionette
+1519403934804	Marionette	INFO	Listening on port 35389
+1519403934865	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519403964949	geckodriver	INFO	geckodriver 0.19.1
+1519403964952	geckodriver	INFO	Listening on 127.0.0.1:57497
+1519403966055	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.AgsP2XZNjo1n"
+1519403966544	Marionette	INFO	Enabled via --marionette
+1519403967709	Marionette	INFO	Listening on port 38609
+1519403967776	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519404000689	geckodriver	INFO	geckodriver 0.19.1
+1519404000692	geckodriver	INFO	Listening on 127.0.0.1:42779
+1519404001795	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.8sJJTvsYsFTo"
+1519404002288	Marionette	INFO	Enabled via --marionette
+1519404003412	Marionette	INFO	Listening on port 36591
+1519404003511	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[Child 9660, Chrome_ChildThread] WARNING: pipe error (18): Connection reset by peer: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1519404075948	geckodriver	INFO	geckodriver 0.19.1
+1519404075951	geckodriver	INFO	Listening on 127.0.0.1:58875
+1519404077051	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.vDIqIjWLIHEa"
+1519404077523	Marionette	INFO	Enabled via --marionette
+1519404078626	Marionette	INFO	Listening on port 36391
+1519404078658	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519404211046	geckodriver	INFO	geckodriver 0.19.1
+1519404211056	geckodriver	INFO	Listening on 127.0.0.1:50399
+1519404212162	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.MdRRV911jNjd"
+1519404212645	Marionette	INFO	Enabled via --marionette
+1519404213782	Marionette	INFO	Listening on port 39501
+1519404213872	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 10240, Chrome_ChildThread] WARNING: pipe error (18): Connection reset by peer: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1519404249219	geckodriver	INFO	geckodriver 0.19.1
+1519404249222	geckodriver	INFO	Listening on 127.0.0.1:33907
+1519404250317	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Umej82fJfmsK"
+1519404250801	Marionette	INFO	Enabled via --marionette
+1519404251958	Marionette	INFO	Listening on port 32939
+1519404252025	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519404263395	geckodriver	INFO	geckodriver 0.19.1
+1519404263398	geckodriver	INFO	Listening on 127.0.0.1:41487
+1519404264508	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.SQvVWX6sJ4OC"
+1519404264976	Marionette	INFO	Enabled via --marionette
+1519404266100	Marionette	INFO	Listening on port 41499
+1519404266124	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519404271589	geckodriver	INFO	geckodriver 0.19.1
+1519404271593	geckodriver	INFO	Listening on 127.0.0.1:37737
+1519404272712	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.i92giGvbfe4B"
+1519404273195	Marionette	INFO	Enabled via --marionette
+1519404274347	Marionette	INFO	Listening on port 44941
+1519404274428	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519404285806	geckodriver	INFO	geckodriver 0.19.1
+1519404285809	geckodriver	INFO	Listening on 127.0.0.1:48413
+1519404286915	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.YEZ82LzdzSBD"
+1519404287389	Marionette	INFO	Enabled via --marionette
+1519404288542	Marionette	INFO	Listening on port 38465
+1519404288631	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519404348970	geckodriver	INFO	geckodriver 0.19.1
+1519404348974	geckodriver	INFO	Listening on 127.0.0.1:48135
+1519404350079	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.gRWaCxIklg0z"
+1519404350559	Marionette	INFO	Enabled via --marionette
+1519404351706	Marionette	INFO	Listening on port 34875
+1519404351807	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 11416, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1519404364445	geckodriver	INFO	geckodriver 0.19.1
+1519404364448	geckodriver	INFO	Listening on 127.0.0.1:53007
+1519404365569	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Vv72SS7EBdXV"
+1519404366045	Marionette	INFO	Enabled via --marionette
+1519404367233	Marionette	INFO	Listening on port 38043
+1519404367284	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519404372677	geckodriver	INFO	geckodriver 0.19.1
+1519404372680	geckodriver	INFO	Listening on 127.0.0.1:57551
+1519404373788	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Cd5RuKfu4ekt"
+1519404374246	Marionette	INFO	Enabled via --marionette
+1519404375364	Marionette	INFO	Listening on port 39921
+1519404375405	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519404974075	geckodriver	INFO	geckodriver 0.19.1
+1519404974078	geckodriver	INFO	Listening on 127.0.0.1:60689
+1519404975176	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.SfcySWXOF5ys"
+1519404975625	Marionette	INFO	Enabled via --marionette
+1519404976928	Marionette	INFO	Listening on port 38393
+1519404976986	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519404983445	geckodriver	INFO	geckodriver 0.19.1
+1519404983448	geckodriver	INFO	Listening on 127.0.0.1:49167
+1519404984554	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.MmTEu0yETWSb"
+1519404985033	Marionette	INFO	Enabled via --marionette
+1519404986349	Marionette	INFO	Listening on port 33247
+1519404986366	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519404993755	geckodriver	INFO	geckodriver 0.19.1
+1519404993758	geckodriver	INFO	Listening on 127.0.0.1:54809
+1519404994862	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.QkS44p1C2YvW"
+1519404995350	Marionette	INFO	Enabled via --marionette
+1519404996630	Marionette	INFO	Listening on port 41649
+1519404996677	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[Child 12658, Chrome_ChildThread] WARNING: pipe error (18): Connection reset by peer: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1519405002974	geckodriver	INFO	geckodriver 0.19.1
+1519405002985	geckodriver	INFO	Listening on 127.0.0.1:36127
+1519405004080	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.chQty0SL1uDE"
+1519405004534	Marionette	INFO	Enabled via --marionette
+1519405005806	Marionette	INFO	Listening on port 38833
+1519405005893	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405099281	geckodriver	INFO	geckodriver 0.19.1
+1519405099285	geckodriver	INFO	Listening on 127.0.0.1:33453
+1519405100540	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.PT74QGPwYwMh"
+1519405101204	Marionette	INFO	Enabled via --marionette
+1519405102510	Marionette	INFO	Listening on port 45021
+1519405102560	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 13175, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1519405114140	geckodriver	INFO	geckodriver 0.19.1
+1519405114144	geckodriver	INFO	Listening on 127.0.0.1:56449
+1519405115259	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.kEFAwq129Hgd"
+1519405115744	Marionette	INFO	Enabled via --marionette
+1519405116850	Marionette	INFO	Listening on port 46083
+1519405116870	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405122161	geckodriver	INFO	geckodriver 0.19.1
+1519405122164	geckodriver	INFO	Listening on 127.0.0.1:52107
+1519405123271	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.2yqzsTUEYsfh"
+1519405123763	Marionette	INFO	Enabled via --marionette
+1519405124920	Marionette	INFO	Listening on port 43743
+1519405124985	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405131210	geckodriver	INFO	geckodriver 0.19.1
+1519405131213	geckodriver	INFO	Listening on 127.0.0.1:56659
+1519405132335	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.xmKpu4YevQ1K"
+1519405132798	Marionette	INFO	Enabled via --marionette
+1519405133934	Marionette	INFO	Listening on port 41471
+1519405133944	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405194785	geckodriver	INFO	geckodriver 0.19.1
+1519405194788	geckodriver	INFO	Listening on 127.0.0.1:45045
+1519405195893	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.YIEvWpHJL2JJ"
+1519405196341	Marionette	INFO	Enabled via --marionette
+1519405197505	Marionette	INFO	Listening on port 37807
+1519405197610	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405209039	geckodriver	INFO	geckodriver 0.19.1
+1519405209042	geckodriver	INFO	Listening on 127.0.0.1:55781
+1519405210147	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.hjRx1l7FaauB"
+1519405210656	Marionette	INFO	Enabled via --marionette
+1519405211869	Marionette	INFO	Listening on port 46041
+1519405211958	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405217378	geckodriver	INFO	geckodriver 0.19.1
+1519405217381	geckodriver	INFO	Listening on 127.0.0.1:55599
+1519405218481	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Qq2u9SYPEdbd"
+1519405218962	Marionette	INFO	Enabled via --marionette
+1519405220065	Marionette	INFO	Listening on port 42035
+1519405220091	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405231417	geckodriver	INFO	geckodriver 0.19.1
+1519405231420	geckodriver	INFO	Listening on 127.0.0.1:45485
+1519405232542	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.PYxIz9nmNd4Y"
+1519405233025	Marionette	INFO	Enabled via --marionette
+1519405234086	Marionette	INFO	Listening on port 36769
+1519405234161	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405374256	geckodriver	INFO	geckodriver 0.19.1
+1519405374259	geckodriver	INFO	Listening on 127.0.0.1:53167
+1519405375440	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.s7Vsj0evurtB"
+1519405375918	Marionette	INFO	Enabled via --marionette
+1519405377105	Marionette	INFO	Listening on port 46573
+1519405377161	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405408765	geckodriver	INFO	geckodriver 0.19.1
+1519405408768	geckodriver	INFO	Listening on 127.0.0.1:45835
+1519405409895	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.518EfiYtVrVs"
+1519405410405	Marionette	INFO	Enabled via --marionette
+1519405411638	Marionette	INFO	Listening on port 42573
+1519405411727	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405440141	geckodriver	INFO	geckodriver 0.19.1
+1519405440144	geckodriver	INFO	Listening on 127.0.0.1:33925
+1519405441255	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.U3pqMWGIUBLj"
+1519405441743	Marionette	INFO	Enabled via --marionette
+1519405442885	Marionette	INFO	Listening on port 38979
+1519405442963	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405486516	geckodriver	INFO	geckodriver 0.19.1
+1519405486519	geckodriver	INFO	Listening on 127.0.0.1:56375
+1519405487628	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.alVXQiD2NvDk"
+1519405488088	Marionette	INFO	Enabled via --marionette
+1519405489237	Marionette	INFO	Listening on port 43779
+1519405489338	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405622376	geckodriver	INFO	geckodriver 0.19.1
+1519405622389	geckodriver	INFO	Listening on 127.0.0.1:39491
+1519405623505	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.cpBJXvqLkR1x"
+1519405624030	Marionette	INFO	Enabled via --marionette
+1519405625212	Marionette	INFO	Listening on port 35485
+1519405625324	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405671915	geckodriver	INFO	geckodriver 0.19.1
+1519405671918	geckodriver	INFO	Listening on 127.0.0.1:47639
+1519405673039	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.SK63t9ndIfS3"
+1519405673528	Marionette	INFO	Enabled via --marionette
+1519405674654	Marionette	INFO	Listening on port 44487
+1519405674752	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405775139	geckodriver	INFO	geckodriver 0.19.1
+1519405775141	geckodriver	INFO	Listening on 127.0.0.1:60869
+1519405776247	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.2ChnYjAggNZg"
+1519405776753	Marionette	INFO	Enabled via --marionette
+1519405777911	Marionette	INFO	Listening on port 39051
+1519405777959	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405894837	geckodriver	INFO	geckodriver 0.19.1
+1519405894841	geckodriver	INFO	Listening on 127.0.0.1:33077
+1519405895932	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.dq0ogdE8d9gi"
+1519405896416	Marionette	INFO	Enabled via --marionette
+1519405897480	Marionette	INFO	Listening on port 33497
+1519405897543	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519405960030	geckodriver	INFO	geckodriver 0.19.1
+1519405960033	geckodriver	INFO	Listening on 127.0.0.1:40963
+1519405961313	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.MhhDZIVMtkmG"
+1519405961871	Marionette	INFO	Enabled via --marionette
+1519405963138	Marionette	INFO	Listening on port 43983
+1519405963222	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+[Child 17008, Chrome_ChildThread] WARNING: pipe error (18): Connection reset by peer: file /build/firefox-h7Huxq/firefox-58.0.2+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1519406005616	geckodriver	INFO	geckodriver 0.19.1
+1519406005620	geckodriver	INFO	Listening on 127.0.0.1:58777
+1519406006728	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.WSx7bJ8Njkrb"
+1519406007212	Marionette	INFO	Enabled via --marionette
+1519406008288	Marionette	INFO	Listening on port 33663
+1519406008339	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519406014955	geckodriver	INFO	geckodriver 0.19.1
+1519406014958	geckodriver	INFO	Listening on 127.0.0.1:57739
+1519406016063	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.qpoZgXpy0AJm"
+1519406016558	Marionette	INFO	Enabled via --marionette
+1519406017702	Marionette	INFO	Listening on port 38269
+1519406017782	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519406023251	geckodriver	INFO	geckodriver 0.19.1
+1519406023254	geckodriver	INFO	Listening on 127.0.0.1:56939
+1519406024360	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.PeCtmYGLLAFK"
+1519406024853	Marionette	INFO	Enabled via --marionette
+1519406026015	Marionette	INFO	Listening on port 46825
+1519406026075	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+1519406033732	geckodriver	INFO	geckodriver 0.19.1
+1519406033736	geckodriver	INFO	Listening on 127.0.0.1:50059
+1519406034834	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.nAiKnqtxdBe4"
+1519406035319	Marionette	INFO	Enabled via --marionette
+1519406036477	Marionette	INFO	Listening on port 36719
+1519406036542	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined
+JavaScript error: http://localhost:8081/static/assets/js/user.js, line 38: TypeError: cancel_user is null
+JavaScript error: http://localhost:8081/static/assets/js/appointments.js, line 38: TypeError: cancel_appointment is null
+JavaScript error: http://localhost:8081/static/assets/js/institution.js, line 38: TypeError: cancel_institution is null
+JavaScript error: http://localhost:8081/static/assets/js/institutionElement.js, line 42: TypeError: cancel_institutionElement is null
+JavaScript error: http://localhost:8081/static/assets/js/specialization.js, line 38: TypeError: cancel_specialization is null
+JavaScript error: http://localhost:8081/static/assets/js/angular/ng-table.min.js, line 2: ReferenceError: angular is not defined

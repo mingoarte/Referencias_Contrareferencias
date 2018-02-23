@@ -18,7 +18,6 @@ class SeleniumTests(StaticLiveServerTestCase):
 
     def setUp(self):
         # Usar fixture para tener datos en la db
-        #call_command("flush", verbosity=0, interactive=False)
         call_command('loaddata', 'fixtures/db.json', verbosity=0)
 
         self.driver = webdriver.Firefox()
@@ -40,11 +39,14 @@ class SeleniumTests(StaticLiveServerTestCase):
     def open(self, url):
         self.driver.get("%s%s" % (self.live_server_url, url))
 
+#@unittest.skip("Verificada")
 class TestBuscarInstituciones(SeleniumTests):
     def runTest(self):
         self.open(reverse('ver_farmacias'))
-        self.assertTrue(u"Gestión de Farmacias" in self.driver.page_source)
+        time.sleep(1)
+        self.assertTrue(u"Gestión de Instituciones Farmacéuticas" in self.driver.page_source)
 
+#@unittest.skip("Verificada")
 class TestAgregarInstituciones(SeleniumTests):
     def runTest(self):
         self.open(reverse('agregar_farmacia'))
@@ -56,14 +58,14 @@ class TestAgregarInstituciones(SeleniumTests):
         self.farmaceuta = self.driver.find_element_by_css_selector("select[name='farmaceuta']")
 
         self.rif.send_keys(u"1234567")
-        self.nombre.send_keys(u"Farmacia 1")
-        self.direccion.send_keys(u"Dirección Farmcia 1")
+        self.nombre.send_keys(u"Farmacia1")
+        self.direccion.send_keys(u"Dirección Farmcia1")
         Select(self.institucion).select_by_visible_text(u"Hospital1")
-        Select(self.farmaceuta).select_by_visible_text(u"Farmaceuta1")
+        Select(self.farmaceuta).select_by_visible_text(u"2121244 medico medico")
         self.driver.find_element_by_css_selector("button[type='submit']").click()
-        self.assertTrue(u"Farmacia 1" in self.driver.page_source)
+        self.assertTrue(u"Farmacia1" in self.driver.page_source)
 
-@unittest.skip("Verificada")
+#@unittest.skip("Verificada")
 class TestModificarInstituciones(SeleniumTests):
     def runTest(self):
         self.open(reverse('agregar_farmacia'))
@@ -75,14 +77,22 @@ class TestModificarInstituciones(SeleniumTests):
         self.farmaceuta = self.driver.find_element_by_css_selector("select[name='farmaceuta']")
 
         self.rif.send_keys(u"1234567")
-        self.nombre.send_keys(u"Farmacia 1")
-        self.direccion.send_keys(u"Dirección Farmcia 1")
+        self.nombre.send_keys(u"Farmacia1")
+        self.direccion.send_keys(u"Dirección Farmacia1")
         Select(self.institucion).select_by_visible_text(u"Hospital1")
-        Select(self.farmaceuta).select_by_visible_text(u"Farmaceuta1")
+        Select(self.farmaceuta).select_by_visible_text(u"2121244 medico medico")
         self.driver.find_element_by_css_selector("button[type='submit']").click()
 
+        self.driver.find_element_by_css_selector("i.fa-pencil").click()
+        time.sleep(1)
+        self.direccion = self.driver.find_element_by_css_selector("input[name='direccion']").clear()
+        self.direccion = self.driver.find_element_by_css_selector("input[name='direccion']")
+        self.direccion.send_keys(u"Farmacia1Modif")
+        self.driver.find_element_by_css_selector("button[type='submit']").click()
+        
+        self.assertTrue(u"Farmacia1Modif" in self.driver.page_source)
 
-@unittest.skip("Verificada")
+#@unittest.skip("Verificada")
 class TestEliminarInstituciones(SeleniumTests):
     def runTest(self):
         self.open(reverse('agregar_farmacia'))
@@ -91,12 +101,20 @@ class TestEliminarInstituciones(SeleniumTests):
         self.nombre = self.driver.find_element_by_css_selector("input[name='nombre']")
         self.direccion = self.driver.find_element_by_css_selector("input[name='direccion']")
         self.institucion = self.driver.find_element_by_css_selector("select[name='institucion']")
+        self.farmaceuta = self.driver.find_element_by_css_selector("select[name='farmaceuta']")
 
         self.rif.send_keys(u"1234567")
-        self.nombre.send_keys(u"Farmacia 1")
-        self.direccion.send_keys(u"Dirección Farmcia 1")
+        self.nombre.send_keys(u"Farmacia1")
+        self.direccion.send_keys(u"Dirección Farmacia1")
         Select(self.institucion).select_by_visible_text(u"Hospital1")
+        Select(self.farmaceuta).select_by_visible_text(u"2121244 medico medico")
         self.driver.find_element_by_css_selector("button[type='submit']").click()
+        time.sleep(1)
+
+        self.driver.find_element_by_css_selector("i.fa-trash").click()
+        self.driver.find_element_by_css_selector("a.btn-primary").click()
+
+        self.assertTrue(u"Farmacia1" not in self.driver.page_source)
 
 if __name__ == '__main__':
     unittest.main()
