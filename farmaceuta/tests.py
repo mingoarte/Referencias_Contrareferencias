@@ -11,12 +11,14 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.core.urlresolvers import reverse
 from django.core.management import call_command
 import unittest, time, re
+from django.contrib.contenttypes.models import ContentType
 
 # run: ./manage.py test farmaceuta
 class SeleniumTests(StaticLiveServerTestCase):
 
     def setUp(self):
         # Usar fixture para tener datos en la db
+        #call_command("flush", verbosity=0, interactive=False)
         call_command('loaddata', 'fixtures/db.json', verbosity=0)
 
         self.driver = webdriver.Firefox()
@@ -28,7 +30,7 @@ class SeleniumTests(StaticLiveServerTestCase):
         self.password = self.driver.find_element_by_css_selector("input[name='password']")
         self.username.send_keys("admin")
         self.password.send_keys("admin")
-        self.login_button.send_keys(Keys.RETURN)
+        self.login_button.click()
 
         time.sleep(1)
 
@@ -43,10 +45,21 @@ class TestBuscarInstituciones(SeleniumTests):
         self.open(reverse('ver_farmacias'))
         self.assertTrue(u"Gestión de Farmacias" in self.driver.page_source)
 
-@unittest.skip("Verificada")
 class TestAgregarInstituciones(SeleniumTests):
     def runTest(self):
         self.open(reverse('agregar_farmacia'))
+        time.sleep(1)
+        self.rif = self.driver.find_element_by_css_selector("input[name='rif']")
+        self.nombre = self.driver.find_element_by_css_selector("input[name='nombre']")
+        self.direccion = self.driver.find_element_by_css_selector("input[name='direccion']")
+        self.institucion = self.driver.find_element_by_css_selector("select[name='institucion']")
+
+        self.rif.send_keys(u"1234567")
+        self.nombre.send_keys(u"Farmacia 1")
+        self.direccion.send_keys(u"Dirección Farmcia 1")
+        Select(self.institucion).select_by_visible_text(u"Hospital1")
+        self.driver.find_element_by_css_selector("button[type='submit']").click()
+        self.assertTrue(u"Farmacia 1" in self.driver.page_source)
 
 @unittest.skip("Verificada")
 class TestModificarInstituciones(SeleniumTests):
