@@ -1,0 +1,1 @@
+[{"fields": {"foto": "", "ci": "221212", "user": 2, "fotosubida": false}, "model": "administrador.usuario", "pk": 1}, {"fields": {"foto": "", "ci": "2121212", "user": 3, "fotosubida": false}, "model": "administrador.usuario", "pk": 2}]
