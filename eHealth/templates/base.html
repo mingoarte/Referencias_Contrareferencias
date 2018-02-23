@@ -94,6 +94,10 @@
                   <li><a href="{% url 'ver_citas' user.pk %}"><i class="fa fa-pencil-square-o "></i>  Ver Citas</a></li>
                 {% endif %}
 
+                {% if user.groups.all.0.name == 'farmaceuta' %}
+                  <li><a href="{% url 'perfil_farmaceuta' user.pk %}"><i class="fa fa-user"></i>  Ver Perfil</a></li>
+                {% endif %}
+
               {% else %}
                 <li><a href="{% url 'ver_usuarios' %}"><i class="fa fa-user"></i>  Gestionar Usuarios</a></li>
                 <li><a href="{% url 'ver_roles' %}"><i class="fa fa-users"></i>  Gestionar Roles</a></li>
