@@ -8,7 +8,7 @@ urlpatterns = [
     url(
         r'^agregar-farmacia$',
         agregarFarmacia.as_view(),
-        name='agregarFarmacia'
+        name='agregar_farmacia'
     ),
     url(
         r'^ver-farmacias$',

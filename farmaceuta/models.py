@@ -11,7 +11,9 @@ class Farmacia(models.Model):
     nombre = models.CharField(max_length=100)
     direccion = models.CharField(max_length=255, blank=False)
     institucion = models.ForeignKey(Institucion,
-    								limit_choices_to=Q(tipo = 'Clinica') | Q(tipo = 'Hospital'))
+    								limit_choices_to=Q(tipo = 'Clinica') | Q(tipo = 'Hospital'),
+    								null=True,
+    								blank=True)
 
     def __str__(self):
         return self.name

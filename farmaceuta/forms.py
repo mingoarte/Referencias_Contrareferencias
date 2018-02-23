@@ -10,8 +10,9 @@ import datetime
 
 
 class farmacia_form(forms.ModelForm):
-
     class Meta:
         model = Farmacia
         fields = ['nombre','direccion', 'rif','institucion']
-
+	def __init__(self, *args, **kwargs):
+		super(farmacia_form, self).__init__(*args, **kwargs)
+		self.fields['institucion'].required = False
