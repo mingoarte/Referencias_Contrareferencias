@@ -40,7 +40,7 @@ class SeleniumTests(StaticLiveServerTestCase):
 
 class TestBuscarInstituciones(SeleniumTests):
     def runTest(self):
-        self.open(reverse('ver_instituciones'))
+        self.open(reverse('ver_farmacias'))
         self.assertTrue(u"Gestión de Instituciones" in self.driver.page_source)
 
 @unittest.skip("Verificada")
