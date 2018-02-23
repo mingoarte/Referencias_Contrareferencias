@@ -55,6 +55,7 @@ class UsuarioForm(forms.ModelForm):
         choices=[
             ('admin', 'Administrador'),
             ('medico', 'Medico'),
+            ('farmaceuta', 'Farmaceuta'),
             ('paciente', 'Paciente'),
         ]
     )

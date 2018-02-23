@@ -1,6 +1,7 @@
 from administrador.models import *
 from paciente.models import *
 from medico.models import *
+from farmaceuta.models import *
 from django.contrib.auth.models import User, Group
 from django.core.urlresolvers import reverse_lazy
 from django.contrib import messages
@@ -28,6 +29,12 @@ def register_user(form):
                         first_name=user.first_name,
                         last_name=user.last_name)
         medico.save()
+    elif form.cleaned_data['rol'] == 'farmaceuta':
+        print('entro en rol farmaceuta')
+        farmaceuta = Farmaceuta(cedula=usuario.ci, usuario=usuario,
+                        first_name=user.first_name,
+                        last_name=user.last_name)
+        farmaceuta.save()
     return user
 
 

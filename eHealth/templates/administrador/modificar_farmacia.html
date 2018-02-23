@@ -12,12 +12,8 @@
 {% block content %}
   <div id="cuerpoHeredado">
     <br>
-    <h2>{{title}} Farmacia</h2>
-    {% if title == "Agregar" %}
+    <h2>Modificar datos de Institución Farmacéutica</h2>
     <form action="" method=POST>
-    {% else %}
-    <form action="" method=POST>
-    {% endif %}
     {% csrf_token %}
     
     <div class="hidden">
@@ -51,14 +47,14 @@
     {% endif %}
 
     <label for="id_rif"> Rif </label>
-    {% bootstrap_field form.rif layout="inline" %}
+    <span> {{ farmacia.rif }} </span>
     <label for="id_nombre">Nombre</label>
-    {% bootstrap_field form.nombre layout="inline" %}
-    <label for="id_direccion">Dirección</label>
+    <span> {{ farmacia.nombre }} </span>
+    <label for="id_espe">Dirección: </label>
     {% bootstrap_field form.direccion layout="inline" %}
-    <label for="id_institucion">Institución Asociada</label>
+    <label for="id_tipo">Institución Asociada</label>
     {% bootstrap_field form.institucion layout="inline" %}
-    <label for="id_institucion">Farmaceuta Regente</label>
+    <label for="id_tipo">Farmaceuta Regente</label>
     {% bootstrap_field form.farmaceuta layout="inline" %}
         {% buttons %}
         <div class="col-md-3"></div>
