@@ -31,4 +31,28 @@ urlpatterns = [
         name='perfil_farmaceuta'
     ),
     
+    url(
+        r'^ver-farmacias-farmaceuta/(?P<pk>\w+)$',
+        VerFarmaciasFarmaceuta.as_view(),
+        name='ver_farmacias_farmaceuta'
+    ),
+
+    url(
+        r'^ver-medicamentos/(?P<pk>\w+)$',
+        VerMedicamentos.as_view(),
+        name='ver_medicamentos'
+    ),
+
+    url(
+        r'^agregar-medicamentos/(?P<pk>\w+)$',
+        AgregarMedicamentos.as_view(),
+        name='agregar_medicamentos'
+    ),
+
+    url(
+    r'^eliminar-medicamentos/(?P<pk>\w+)$',
+    'farmaceuta.controllers.eliminar_medicamento',
+    name='eliminar_medicamentos'
+    ),
+
 ]

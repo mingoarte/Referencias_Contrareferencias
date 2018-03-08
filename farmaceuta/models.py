@@ -31,7 +31,28 @@ class Farmacia(models.Model):
     								limit_choices_to=Q(tipo = 'Clinica') | Q(tipo = 'Hospital'),
     								null=True,
     								blank=True)
-    farmaceuta = models.ForeignKey(Farmaceuta)
+    farmaceuta = models.ForeignKey(Farmaceuta, null=True)
 
     def __str__(self):
         return self.nombre
+
+
+class Medicamento(models.Model):
+    nombre = models.CharField(max_length=256, blank=False)
+    indicacion = models.TextField(max_length=512, blank=False)
+    posologia = models.TextField(max_length=512, blank=False)
+    marca = models.CharField(max_length=256)
+    stock = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(99999999)])
+    tipo = models.CharField(max_length=32, choices={('grajeas', 'Grajeas'),
+                                                    ('jarabe', 'Jarabe'),
+                                                    ('inyectable', 'Inyectable')})
+    farmacia = models.ForeignKey(Farmacia, null=True)
+
+
+class Lote(models.Model):
+    medicamento = models.ForeignKey(Medicamento)
+    f_elaboracion = models.DateField()
+    f_vencimiento = models.DateField()
+    precio = models.DecimalField(max_digits=15, decimal_places=2)
+    cantidad = models.PositiveIntegerField()
+    activo = models.BooleanField()

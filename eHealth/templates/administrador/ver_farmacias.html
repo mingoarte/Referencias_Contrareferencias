@@ -10,11 +10,17 @@
           <th style="text-align: center;">Nombre</th>
           <th style="text-align: center;">Dirección</th>
           <th style="text-align: center;">Institución</th>
+          {% if  not farmaceuta %}
           <th style="text-align: center">
           <a id="add_institucion" href="{% url 'agregar_farmacia' %}">
             <i class="fa fa-plus-circle" style="font-size:20px;color:white"></i>
           </a>
           </th>
+          {% endif %}
+
+          {% if  farmaceuta %}
+          <th style="text-align: center">Gestionar Medicamentos</th>
+          {% endif %}
         </tr>
       </thead>
       <tbody>
@@ -46,10 +52,16 @@
           <td style="text-align: center;">{{farmacia.direccion}}</td>
           <td style="text-align: center;">{{farmacia.institucion}}</td>
 
+          {% if not farmaceuta %}
           <td style="text-align: center;">
             <a href="{% url 'modificar_farmacia' farmacia.pk %}"><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
             <a data-toggle="modal" data-target="#myModal{{farmacia.pk}}" ><i class="fa fa-trash" style="font-size:20px;color:#5882FA"></i></a>
           </td>
+          {% else %}
+          <td style="text-align: center;">
+            <a href="{% url 'ver_medicamentos' farmacia.pk %}"><i class="fa fa-search" style="font-size:20px;color:#5882FA"></i></a>
+          </td>
+          {% endif %}
         </tr>
       {% endfor%}
       </tbody>
