@@ -66,7 +66,9 @@ class agregarFarmacia(TemplateView):
             farmaceuta = request.POST['farmaceuta']
 
             try:
-                tmp = Institucion.objects.get(pk=int(institucion))
+                tmp = None
+                if institucion:
+                    tmp = Institucion.objects.get(pk=int(institucion))
                 tmp2 = Farmaceuta.objects.get(pk=int(farmaceuta))
                 value = Farmacia(rif=rif, nombre=nombre, direccion=direccion, institucion=tmp, farmaceuta=tmp2)
             except:
@@ -120,8 +122,9 @@ class ModificarFarmacia(CreateView):
         if form.is_valid():
             print('entro es valido')
             direccion = request.POST['direccion']
-            institucion = request.POST['institucion']
-            farmaceuta = request.POST['farmaceuta']
+            institucion = request.POST.get('institucion',None)
+            farmaceuta = request.POST.get('farmaceuta',None)
+            
             value = modificar_farmacia(self.kwargs['pk'], direccion, institucion, farmaceuta)
 
             if value is True:
@@ -214,4 +217,65 @@ class PerfilFarmaceuta(CreateView):
         else:
             return render_to_response('medico/perfil_medico.html',
                                       {'form': form},
+                                      context_instance=RequestContext(request))
+
+
+class VerMedicamentos(TemplateView):
+    template_name = 'farmaceuta/ver_medicamentos.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(
+            VerMedicamentos, self).get_context_data(**kwargs)
+        farmacia = Farmacia.objects.get(pk=int(self.kwargs['pk']))
+        medicamentos = Medicamento.objects.filter(farmacia=self.kwargs['pk'])
+        context['medicamentos'] = medicamentos
+        context['farmacia'] = farmacia
+        return context
+
+
+class VerFarmaciasFarmaceuta(TemplateView):
+    template_name = 'administrador/ver_farmacias.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(
+            VerFarmaciasFarmaceuta, self).get_context_data(**kwargs)
+        farmacias = Farmacia.objects.filter(farmaceuta__usuario__user=self.kwargs['pk'])
+        print "self.kwargs['pk']"
+        print self.kwargs['pk']
+        
+        context['farmacias'] = farmacias
+        context['farmaceuta'] = True
+
+        return context
+
+
+class AgregarMedicamentos(TemplateView):
+    template_name = 'farmaceuta/agregar_medicamentos.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(
+            AgregarMedicamentos, self).get_context_data(**kwargs)
+
+        context['form'] = MedicamentoForm
+        context['title'] = 'Agregar'
+
+        return context
+
+    def post(self, request, *args, **kwargs):
+        """
+        Handles POST requests, instantiating a form instance with the passed
+        POST variables and then checked for validity.
+        """
+        farmacia = Farmacia.objects.get(pk=int(self.kwargs['pk']))
+        form = MedicamentoForm(request.POST)
+        if form.is_valid():
+            medicamento = form.save()
+            medicamento.farmacia = farmacia
+            medicamento.save()
+            return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': farmacia.pk}))
+        else:
+            messages.error(request,"Por favor verifique los campos suguientes:")
+            return render_to_response('farmaceuta/agregar_medicamentos.html',
+                                      {'form': form,
+                                       'title': 'Agregar'},
                                       context_instance=RequestContext(request))

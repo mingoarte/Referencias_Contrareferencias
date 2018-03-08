@@ -56,10 +56,12 @@ def modificar_farmacia(inst_id, direccion, institucion, farmaceuta):
     try:
         farmacia = Farmacia.objects.get(pk=int(inst_id))
         farmacia.direccion = direccion
-        institucion = Institucion.objects.get(id=institucion)
-        farmacia.institucion = institucion
-        farmaceuta = Farmaceuta.objects.get(cedula=farmaceuta)
-        farmacia.farmaceuta = farmaceuta
+        if institucion:
+            institucion = Institucion.objects.get(id=institucion)
+            farmacia.institucion = institucion
+        if farmaceuta:
+            farmaceuta = Farmaceuta.objects.get(cedula=farmaceuta)
+            farmacia.farmaceuta = farmaceuta
         farmacia.save()
         return True
     except:
@@ -71,3 +73,9 @@ def eliminar_farmacia(request, pk):
     farmacia.delete()
     return HttpResponseRedirect(reverse_lazy(
         'ver_farmacias'))
+
+def eliminar_medicamento(request, pk):
+    medicamento = Medicamento.objects.get(pk=pk)
+    pk = medicamento.farmacia.pk
+    medicamento.delete()
+    return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': pk}))

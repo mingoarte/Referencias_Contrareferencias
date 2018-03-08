@@ -29,3 +29,11 @@ class FarmaciaFormEditar(forms.ModelForm):
     	self.fields['institucion'].empty_label = None
 
     # def clean_farmaceuta():
+
+
+class MedicamentoForm(forms.ModelForm):
+    class Meta:
+        model = Medicamento
+        exclude = ["stock", "farmacia"]
+    def __init__(self, *args, **kwargs):
+        super(MedicamentoForm, self).__init__(*args, **kwargs)
