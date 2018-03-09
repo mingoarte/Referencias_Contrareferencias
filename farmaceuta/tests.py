@@ -14,7 +14,7 @@ import unittest, time, re
 from django.contrib.contenttypes.models import ContentType
 
 # run: ./manage.py test farmaceuta
-class SeleniumTests(StaticLiveServerTestCase):
+class SeleniumTestsSprint2(StaticLiveServerTestCase):
 
     def setUp(self):
         # Usar fixture para tener datos en la db
@@ -39,15 +39,136 @@ class SeleniumTests(StaticLiveServerTestCase):
     def open(self, url):
         self.driver.get("%s%s" % (self.live_server_url, url))
 
-#@unittest.skip("Verificada")
-class TestBuscarInstituciones(SeleniumTests):
+class SeleniumTestsSprint3(StaticLiveServerTestCase):
+
+    def setUp(self):
+        # Usar fixture para tener datos en la db
+        call_command('loaddata', 'fixtures/db.json', verbosity=0)
+
+        self.driver = webdriver.Firefox()
+        self.driver.get('%s' % (self.live_server_url))
+
+        # Admin login
+        self.login_button = self.driver.find_element_by_css_selector("input[type='submit']")
+        self.username = self.driver.find_element_by_css_selector("input[name='username']")
+        self.password = self.driver.find_element_by_css_selector("input[name='password']")
+        self.username.send_keys("Farmaceuta")
+        self.password.send_keys("1234")
+        self.login_button.click()
+
+        time.sleep(1)
+
+    def tearDown(self):
+        self.driver.close()
+
+    def open(self, url):
+        self.driver.get("%s%s" % (self.live_server_url, url))
+
+######################### SPRINT 3 ##############################
+#@unittest.skip("Verificada Sprint 3")
+class TestAgregarMedicamento(SeleniumTestsSprint3):
+    def runTest(self):
+
+        self.driver.find_element_by_css_selector("i.fa-stethoscope").click()
+        time.sleep(1)
+        self.driver.find_element_by_css_selector("i.fa-search").click()
+        time.sleep(1)
+        self.driver.find_element_by_css_selector("i.fa-plus-circle").click()
+
+        self.driver.find_element_by_css_selector("input[name='nombre']").send_keys(u"Medicamento 1")
+        self.driver.find_element_by_css_selector("textarea[name='indicacion']").send_keys(u"Indicacion Medicamento 1")
+        self.driver.find_element_by_css_selector("textarea[name='posologia']").posologia.send_keys(u"Posologia Medicamento 1")
+        self.driver.find_element_by_css_selector("select[name='tipo']").select_by_visible_text(u"Jarabe")
+        self.driver.find_element_by_css_selector("input[name='marca']").send_keys(u"Marca Medicamento 1")
+
+        time.sleep(1)
+        self.driver.find_element_by_css_selector("button[type='submit']").click()
+
+        self.assertTrue(u"Medicamento 1" in self.driver.page_source)
+
+#@unittest.skip("Verificada Sprint 3")
+class TestBuscarMedicamento(SeleniumTestsSprint3):
+    def runTest(self):
+        # Agregar el medicamento a buscar
+        self.driver.find_element_by_css_selector("i.fa-stethoscope").click()
+        self.driver.find_element_by_css_selector("i.fa-search").click()
+        self.driver.find_element_by_css_selector("i.fa-plus-circle").click()
+        self.driver.find_element_by_css_selector("input[name='nombre']").send_keys(u"Medicamento 1")
+        self.driver.find_element_by_css_selector("textarea[name='indicacion']").send_keys(u"Indicacion Medicamento 1")
+        self.driver.find_element_by_css_selector("textarea[name='posologia']").send_keys(u"Posologia Medicamento 1")
+        Select(self.driver.find_element_by_css_selector("select[name='tipo']")).select_by_visible_text(u"Jarabe")
+        self.driver.find_element_by_css_selector("input[name='marca']").send_keys(u"Marca Medicamento 1")
+        self.driver.find_element_by_css_selector("button[type='submit']").click()
+
+        # Buscar el medicamento
+        self.driver.find_element_by_css_selector("input[type='search'").send_keys(u"Medicamento 1")
+        time.sleep(1)
+        self.assertTrue(u"Medicamento 1" in self.driver.page_source)
+
+#@unittest.skip("Verificada Sprint 3")
+class TestModificarMedicamento(SeleniumTestsSprint3):
+    def runTest(self):
+
+        # Agregar el medicamento a eliminar
+        self.driver.find_element_by_css_selector("i.fa-stethoscope").click()
+        self.driver.find_element_by_css_selector("i.fa-search").click()
+        self.driver.find_element_by_css_selector("i.fa-plus-circle").click()
+        self.driver.find_element_by_css_selector("input[name='nombre']").send_keys(u"Medicamento 1")
+        self.driver.find_element_by_css_selector("textarea[name='indicacion']").send_keys(u"Indicacion Medicamento 1")
+        self.driver.find_element_by_css_selector("textarea[name='posologia']").send_keys(u"Posologia Medicamento 1")
+        Select(self.driver.find_element_by_css_selector("select[name='tipo']")).select_by_visible_text(u"Jarabe")
+        self.driver.find_element_by_css_selector("input[name='marca']").send_keys(u"Marca Medicamento 1")
+        self.driver.find_element_by_css_selector("button[type='submit']").click()
+
+        # Modificar el medicamento
+        self.driver.find_element_by_css_selector("i.fa-stethoscope").click()
+        self.driver.find_element_by_css_selector("i.fa-search").click()
+        time.sleep(1)
+        self.driver.find_element_by_css_selector("i.fa-pencil").click()
+        self.driver.find_element_by_css_selector("input[name='marca']").clear()
+        self.driver.find_element_by_css_selector("input[name='marca']").send_keys(u"Editado Medicamento 1")
+        time.sleep(1)
+        self.driver.find_element_by_css_selector("button[type='submit']").click()
+        
+        self.assertTrue(u"Editado Medicamento 1" in self.driver.page_source)
+
+#@unittest.skip("Verificada Sprint 3")
+class TestEliminarMedicamento(SeleniumTestsSprint3):
+    def runTest(self):
+
+        # Agregar el medicamento a eliminar
+        self.driver.find_element_by_css_selector("i.fa-stethoscope").click()
+        self.driver.find_element_by_css_selector("i.fa-search").click()
+        self.driver.find_element_by_css_selector("i.fa-plus-circle").click()
+        self.driver.find_element_by_css_selector("input[name='nombre']").send_keys(u"Medicamento 1")
+        self.driver.find_element_by_css_selector("textarea[name='indicacion']").send_keys(u"Indicacion Medicamento 1")
+        self.driver.find_element_by_css_selector("textarea[name='posologia']").send_keys(u"Posologia Medicamento 1")
+        Select(self.driver.find_element_by_css_selector("select[name='tipo']")).select_by_visible_text(u"Jarabe")
+        self.driver.find_element_by_css_selector("input[name='marca']").send_keys(u"Marca Medicamento 1")
+        self.driver.find_element_by_css_selector("button[type='submit']").click()
+
+        # Eliminar el medicamento
+        self.driver.find_element_by_css_selector("i.fa-stethoscope").click()
+        time.sleep(1)
+        self.driver.find_element_by_css_selector("i.fa-search").click()
+        time.sleep(1)
+        self.driver.find_element_by_css_selector("i.fa-trash").click()
+        self.driver.find_element_by_css_selector("a.btn-primary").click()
+
+        self.assertTrue(u"Medicamento 1" not in self.driver.page_source)
+
+#################################################################
+
+######################### SPRINT 2 ##############################
+@unittest.skip("Verificada Sprint 2")
+class TestBuscarInstituciones(SeleniumTestsSprint2):
     def runTest(self):
         self.open(reverse('ver_farmacias'))
         time.sleep(1)
         self.assertTrue(u"Gestión de Instituciones Farmacéuticas" in self.driver.page_source)
 
-#@unittest.skip("Verificada")
-class TestAgregarInstituciones(SeleniumTests):
+@unittest.skip("Verificada Sprint 2")
+class TestAgregarInstituciones(SeleniumTestsSprint2):
     def runTest(self):
         self.open(reverse('agregar_farmacia'))
         time.sleep(1)
@@ -65,8 +186,8 @@ class TestAgregarInstituciones(SeleniumTests):
         self.driver.find_element_by_css_selector("button[type='submit']").click()
         self.assertTrue(u"Farmacia1" in self.driver.page_source)
 
-#@unittest.skip("Verificada")
-class TestModificarInstituciones(SeleniumTests):
+@unittest.skip("Verificada Sprint 2")
+class TestModificarInstituciones(SeleniumTestsSprint2):
     def runTest(self):
         self.open(reverse('agregar_farmacia'))
         time.sleep(1)
@@ -92,8 +213,8 @@ class TestModificarInstituciones(SeleniumTests):
         
         self.assertTrue(u"Farmacia1Modif" in self.driver.page_source)
 
-#@unittest.skip("Verificada")
-class TestEliminarInstituciones(SeleniumTests):
+@unittest.skip("Verificada Sprint 2")
+class TestEliminarInstituciones(SeleniumTestsSprint2):
     def runTest(self):
         self.open(reverse('agregar_farmacia'))
         time.sleep(1)
@@ -116,5 +237,6 @@ class TestEliminarInstituciones(SeleniumTests):
 
         self.assertTrue(u"Farmacia1" not in self.driver.page_source)
 
+################################################################
 if __name__ == '__main__':
     unittest.main()
