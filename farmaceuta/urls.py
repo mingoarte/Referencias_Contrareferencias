@@ -50,15 +50,20 @@ urlpatterns = [
     ),
 
     url(
-    r'^eliminar-medicamentos/(?P<pk>\w+)$',
-    'farmaceuta.controllers.eliminar_medicamento',
-    name='eliminar_medicamentos'
+        r'^eliminar-medicamentos/(?P<pk>\w+)$',
+        'farmaceuta.controllers.eliminar_medicamento',
+        name='eliminar_medicamentos'
     ),
 
     url(
         r'^modificar-medicamento/(?P<pk>\w+)$',
         ModificarMedicamento.as_view(),
         name='modificar_medicamento'
+    ),
+    url(
+        r'^agregar-lote/(?P<pk>\w+)$',
+        AgregarLoteMedicamento.as_view(),
+        name='agregar_lote'
     ),
 
 ]

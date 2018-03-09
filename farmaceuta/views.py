@@ -269,7 +269,7 @@ class AgregarMedicamentos(TemplateView):
         farmacia = Farmacia.objects.get(pk=int(self.kwargs['pk']))
         form = MedicamentoForm(request.POST)
         if form.is_valid():
-            medicamento = form.save()
+            medicamento = form.save(commit=False)
             medicamento.farmacia = farmacia
             medicamento.save()
             return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': farmacia.pk}))
@@ -319,6 +319,43 @@ class ModificarMedicamento(TemplateView):
         else:
             messages.error(request,"Por favor verifique los campos suguientes:")
             return render_to_response('farmaceuta/agregar_medicamentos.html',
+                                      {'form': form,
+                                       'title': 'Agregar'},
+                                      context_instance=RequestContext(request))
+
+
+class AgregarLoteMedicamento(TemplateView):
+    template_name = 'farmaceuta/agregar_lote.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(
+            AgregarLoteMedicamento, self).get_context_data(**kwargs)
+
+        m = Medicamento.objects.get(id=self.kwargs['pk'])
+        context['form'] = LoteForm
+        context['medicamento'] = m
+        context['title'] = 'Agregar'
+
+        return context
+
+    def post(self, request, *args, **kwargs):
+        """
+        Handles POST requests, instantiating a form instance with the passed
+        POST variables and then checked for validity.
+        """
+        m = Medicamento.objects.get(id=self.kwargs['pk'])
+        form = LoteForm(request.POST)
+        print form.is_valid()
+        print "form.is_valid()"
+        if form.is_valid():
+            lote = form.save(commit=False)
+            lote.medicamento = m
+            lote.activo = not Lote.objects.filter(medicamento=m, activo=True).exists()
+            lote.save()
+            return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': m.farmacia.pk}))
+        else:
+            messages.error(request,"Por favor verifique los campos suguientes:")
+            return render_to_response('farmaceuta/agregar_lote.html',
                                       {'form': form,
                                        'title': 'Agregar'},
                                       context_instance=RequestContext(request))
