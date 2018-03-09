@@ -65,7 +65,7 @@ class SeleniumTestsSprint3(StaticLiveServerTestCase):
         self.driver.get("%s%s" % (self.live_server_url, url))
 
 ######################### SPRINT 3 ##############################
-#@unittest.skip("Verificada Sprint 3")
+@unittest.skip("Verificada Sprint 3")
 class TestAgregarMedicamento(SeleniumTestsSprint3):
     def runTest(self):
 
@@ -101,11 +101,11 @@ class TestBuscarMedicamento(SeleniumTestsSprint3):
         self.driver.find_element_by_css_selector("button[type='submit']").click()
 
         # Buscar el medicamento
-        self.driver.find_element_by_css_selector("input[type='search'").send_keys(u"Medicamento 1")
+        self.driver.find_element_by_css_selector("input[type='search']").send_keys(u"Medicamento 1")
         time.sleep(1)
         self.assertTrue(u"Medicamento 1" in self.driver.page_source)
 
-#@unittest.skip("Verificada Sprint 3")
+@unittest.skip("Verificada Sprint 3")
 class TestModificarMedicamento(SeleniumTestsSprint3):
     def runTest(self):
 
@@ -129,7 +129,7 @@ class TestModificarMedicamento(SeleniumTestsSprint3):
         self.driver.find_element_by_css_selector("input[name='nombre']").send_keys(u"Editado Medicamento 1")
         time.sleep(1)
         self.driver.find_element_by_css_selector("button[type='submit']").click()
-        
+        time.sleep(1)
         self.assertTrue(u"Editado Medicamento 1" in self.driver.page_source)
 
 @unittest.skip("Verificada Sprint 3")
@@ -144,7 +144,7 @@ class TestEliminarMedicamento(SeleniumTestsSprint3):
         self.driver.find_element_by_css_selector("textarea[name='indicacion']").send_keys(u"Indicacion Medicamento 1")
         self.driver.find_element_by_css_selector("textarea[name='posologia']").send_keys(u"Posologia Medicamento 1")
         Select(self.driver.find_element_by_css_selector("select[name='tipo']")).select_by_visible_text(u"Jarabe")
-        self.driver.find_element_by_css_selector("input[name='marca']").send_keys(u"Marca Medicamento 1")
+        Select(self.driver.find_element_by_css_selector("select[name='marca']")).select_by_visible_text(u"Lab1")
         self.driver.find_element_by_css_selector("button[type='submit']").click()
 
         # Eliminar el medicamento
