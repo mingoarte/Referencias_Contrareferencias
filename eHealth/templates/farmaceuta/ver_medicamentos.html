@@ -47,7 +47,7 @@
           <td style="text-align: center;">{{medicamento.stock}}</td>
 
           <td style="text-align: center;">
-            <a href="{% url 'modificar_farmacia' farmacia.pk %}"><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
+            <a href="{% url 'modificar_medicamento' medicamento.pk %}"><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
             <a data-toggle="modal" data-target="#myModal{{medicamento.pk}}" ><i class="fa fa-trash" style="font-size:20px;color:#5882FA"></i></a>
           </td>
         </tr>
