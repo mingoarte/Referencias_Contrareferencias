@@ -87,8 +87,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ehealth_database',
-        'USER': 'ehealth_user',
-        'PASSWORD': 'ehealth123',
+        'USER': 'postgres',
+        'PASSWORD': 'targaryen',
         'HOST': 'localhost',
         'PORT': '',
     }
