@@ -279,3 +279,46 @@ class AgregarMedicamentos(TemplateView):
                                       {'form': form,
                                        'title': 'Agregar'},
                                       context_instance=RequestContext(request))
+
+
+class ModificarMedicamento(TemplateView):
+    template_name = 'farmaceuta/agregar_medicamentos.html'
+    form_class = MedicamentoForm
+
+    def get_context_data(self, **kwargs):
+        context = super(
+            ModificarMedicamento, self).get_context_data(**kwargs)
+        medicamento = Medicamento.objects.get(pk=self.kwargs['pk'])
+        form = MedicamentoForm(initial={
+                             'nombre': medicamento.nombre,
+                             'indicacion': medicamento.indicacion,
+                             'posologia': medicamento.posologia,
+                             'tipo': medicamento.tipo,
+                             'marca': medicamento.marca
+                            })
+
+        context['form'] = form
+
+        return context
+
+    def post(self, request, *args, **kwargs):
+        """
+        Handles POST requests, instantiating a form instance with the passed
+        POST variables and then checked for validity.
+        """
+        medicamento = Medicamento.objects.get(pk=self.kwargs['pk'])
+        form = MedicamentoForm(request.POST)
+        if form.is_valid():
+            medicamento.nombre = request.POST['nombre']
+            medicamento.indicacion = request.POST['indicacion']
+            medicamento.posologia = request.POST['posologia']
+            medicamento.tipo = request.POST['tipo']
+            medicamento.marca = request.POST['marca']
+            medicamento.save()
+            return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': medicamento.farmacia.pk}))
+        else:
+            messages.error(request,"Por favor verifique los campos suguientes:")
+            return render_to_response('farmaceuta/agregar_medicamentos.html',
+                                      {'form': form,
+                                       'title': 'Agregar'},
+                                      context_instance=RequestContext(request))

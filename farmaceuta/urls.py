@@ -55,4 +55,10 @@ urlpatterns = [
     name='eliminar_medicamentos'
     ),
 
+    url(
+        r'^modificar-medicamento/(?P<pk>\w+)$',
+        ModificarMedicamento.as_view(),
+        name='modificar_medicamento'
+    ),
+
 ]
