@@ -11,6 +11,7 @@
           <th style="text-align: center;">Dirección</th>
           <th style="text-align: center;">Institución</th>
           {% if  not farmaceuta %}
+          <th style="text-align: center;">Farmaceuta Regente</th>
           <th style="text-align: center">
           <a id="add_institucion" href="{% url 'agregar_farmacia' %}">
             <i class="fa fa-plus-circle" style="font-size:20px;color:white"></i>
@@ -50,9 +51,18 @@
           <td style="text-align: center;">{{farmacia.rif}}</td>
           <td style="text-align: center;">{{farmacia.nombre}}</td>
           <td style="text-align: center;">{{farmacia.direccion}}</td>
+          {% if farmacia.institucion %}
           <td style="text-align: center;">{{farmacia.institucion}}</td>
+          {% else %}
+          <td style="text-align: center;">N/A</td>
+          {% endif %}
 
           {% if not farmaceuta %}
+          {% if farmacia.farmaceuta %}
+          <td style="text-align: center;">{{farmacia.farmaceuta.usuario.user.get_full_name}}</td>
+          {% else %}
+          <td style="text-align: center;">No asignado</td>
+          {% endif %}
           <td style="text-align: center;">
             <a href="{% url 'modificar_farmacia' farmacia.pk %}"><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
             <a data-toggle="modal" data-target="#myModal{{farmacia.pk}}" ><i class="fa fa-trash" style="font-size:20px;color:#5882FA"></i></a>

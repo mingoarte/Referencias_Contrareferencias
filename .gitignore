@@ -1,2 +1,6 @@
 .test/
 *.pyc
+administrador/*.pyc
+medico/*.pyc
+farmaceuta/*.pyc
+paciente/*.pyc

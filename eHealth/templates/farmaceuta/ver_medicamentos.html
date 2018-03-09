@@ -44,7 +44,7 @@
           <td style="text-align: center;">{{medicamento.nombre}}</td>
           <td style="text-align: center;">{{medicamento.tipo}}</td>
           <td style="text-align: center;">{{medicamento.marca}}</td>
-          <td style="text-align: center;">{{medicamento.stock}}</td>
+          <td style="text-align: center;">{{medicamento.stock}} &nbsp;&nbsp; <a href="{% url 'agregar_lote' medicamento.pk %}" title="Agregar inventario"><i class="fa fa-plus" style="font-size:14px;color:#5882FA"></i></a></td>
 
           <td style="text-align: center;">
             <a href="{% url 'modificar_medicamento' medicamento.pk %}"><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
