@@ -313,7 +313,8 @@ class ModificarMedicamento(TemplateView):
             medicamento.indicacion = request.POST['indicacion']
             medicamento.posologia = request.POST['posologia']
             medicamento.tipo = request.POST['tipo']
-            medicamento.marca = request.POST['marca']
+            institucion = Institucion.objects.get(id=request.POST['marca'])
+            medicamento.marca = institucion
             medicamento.save()
             return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': medicamento.farmacia.pk}))
         else:
