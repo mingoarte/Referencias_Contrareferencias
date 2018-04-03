@@ -146,7 +146,7 @@ class Medico_Citas(models.Model):
         unique_together = ("paciente","medico","institucion","fecha")
 
 class Medico_Revision(models.Model):
-    cita = models.OneToOneField(Medico_Citas, on_delete=models.CASCADE, primary_key= True,)
+    cita = models.OneToOneField(Medico_Citas, on_delete=models.CASCADE, primary_key= True)
     motivos = models.CharField(max_length=500, blank=False)
     sintomas = models.CharField(max_length=500, blank=False)
     presion_sanguinea_diastolica = models.IntegerField(blank=False, default=0)
@@ -161,7 +161,13 @@ class Medico_Informe(models.Model):
     medico_Revision = models.ForeignKey(Medico_Revision,
                                         on_delete=models.CASCADE)
     desc_prediagnostico = models.TextField(max_length=100)
-    recipe_medico = models.TextField()
+
+
+class RecipeMedico(models.Model):
+    from farmaceuta.models import Medicamento
+    informe = models.ForeignKey(Medico_Informe)
+    medicamentos = models.ManyToManyField(Medicamento)
+    paciente = models.ForeignKey(Paciente)
 
 
 class Referencia(models.Model):

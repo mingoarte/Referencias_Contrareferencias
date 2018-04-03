@@ -8,6 +8,8 @@ import django.core.validators
 class Migration(migrations.Migration):
 
     dependencies = [
+        ('paciente', '0001_initial'),
+        ('administrador', '0001_initial'),
     ]
 
     operations = [
@@ -38,6 +40,7 @@ class Migration(migrations.Migration):
                 ('estado_civil', models.CharField(max_length=15, null=True, blank=True)),
                 ('telefono', models.CharField(max_length=15, null=True, blank=True)),
                 ('direccion', models.CharField(max_length=100, null=True, blank=True)),
+                ('usuario', models.ForeignKey(to='administrador.Usuario')),
             ],
         ),
         migrations.CreateModel(
@@ -57,6 +60,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('horario', models.CharField(max_length=1000)),
+                ('especialidad', models.ForeignKey(to='medico.Especialidad')),
+                ('institucion', models.ForeignKey(to='medico.Institucion')),
+                ('medico', models.ForeignKey(to='medico.Medico')),
             ],
         ),
         migrations.CreateModel(
@@ -67,6 +73,7 @@ class Migration(migrations.Migration):
                 ('fecha_graduacion', models.DateField()),
                 ('descripcion', models.CharField(max_length=500)),
                 ('institucion', models.CharField(max_length=500)),
+                ('medico', models.ForeignKey(to='medico.Medico')),
             ],
         ),
         migrations.CreateModel(
@@ -77,6 +84,7 @@ class Migration(migrations.Migration):
                 ('descripcion', models.CharField(max_length=500)),
                 ('institucion', models.CharField(max_length=500)),
                 ('date', models.DateField()),
+                ('medico', models.ForeignKey(to='medico.Medico')),
             ],
         ),
         migrations.CreateModel(
@@ -88,6 +96,7 @@ class Migration(migrations.Migration):
                 ('fecha_inicio', models.DateField()),
                 ('fecha_fin', models.DateField()),
                 ('institucion', models.CharField(max_length=500)),
+                ('medico', models.ForeignKey(to='medico.Medico')),
             ],
         ),
         migrations.CreateModel(
@@ -96,6 +105,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('titulo', models.CharField(max_length=500)),
                 ('descripcion', models.CharField(max_length=500)),
+                ('medico', models.ForeignKey(to='medico.Medico')),
             ],
         ),
         migrations.CreateModel(
@@ -103,7 +113,6 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('desc_prediagnostico', models.TextField(max_length=100)),
-                ('recipe_medico', models.TextField()),
             ],
         ),
         migrations.CreateModel(
@@ -113,6 +122,7 @@ class Migration(migrations.Migration):
                 ('titulo', models.CharField(max_length=500)),
                 ('fecha', models.DateField()),
                 ('descripcion', models.CharField(max_length=500)),
+                ('medico', models.ForeignKey(to='medico.Medico')),
             ],
         ),
         migrations.CreateModel(
@@ -126,6 +136,15 @@ class Migration(migrations.Migration):
                 ('numero', models.CharField(max_length=5)),
                 ('volumen', models.CharField(max_length=5)),
                 ('fecha', models.DateField()),
+                ('medico', models.ForeignKey(to='medico.Medico')),
+            ],
+        ),
+        migrations.CreateModel(
+            name='RecipeMedico',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('informe', models.ForeignKey(to='medico.Medico_Informe')),
+                ('paciente', models.ForeignKey(to='paciente.Paciente')),
             ],
         ),
         migrations.CreateModel(
@@ -171,5 +190,39 @@ class Migration(migrations.Migration):
             model_name='referencia',
             name='medico',
             field=models.ForeignKey(to='medico.Medico'),
+        ),
+        migrations.AddField(
+            model_name='referencia',
+            name='paciente',
+            field=models.ForeignKey(to='paciente.Paciente'),
+        ),
+        migrations.AddField(
+            model_name='medico_citas',
+            name='especialidad',
+            field=models.ForeignKey(to='medico.Especialidad'),
+        ),
+        migrations.AddField(
+            model_name='medico_citas',
+            name='institucion',
+            field=models.ForeignKey(to='medico.Institucion'),
+        ),
+        migrations.AddField(
+            model_name='medico_citas',
+            name='medico',
+            field=models.ForeignKey(to='medico.Medico'),
+        ),
+        migrations.AddField(
+            model_name='medico_citas',
+            name='paciente',
+            field=models.ForeignKey(to='paciente.Paciente'),
+        ),
+        migrations.AddField(
+            model_name='medico_informe',
+            name='medico_Revision',
+            field=models.ForeignKey(to='medico.Medico_Revision'),
+        ),
+        migrations.AlterUniqueTogether(
+            name='medico_citas',
+            unique_together=set([('paciente', 'medico', 'institucion', 'fecha')]),
         ),
     ]

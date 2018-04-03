@@ -41,19 +41,27 @@ class Medicamento(models.Model):
     nombre = models.CharField(max_length=256, blank=False)
     indicacion = models.TextField(max_length=512, blank=False)
     posologia = models.TextField(max_length=512, blank=False)
-    marca = models.ForeignKey(Institucion, limit_choices_to=Q(tipo='Laboratorio'))
-    stock = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(99999999)])
+    # marca = models.ForeignKey(Institucion, limit_choices_to=Q(tipo='Laboratorio'))
+    # stock = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(99999999)])
     tipo = models.CharField(max_length=32, choices={('grajeas', 'Grajeas'),
                                                     ('jarabe', 'Jarabe'),
                                                     ('inyectable', 'Inyectable')})
-    farmacia = models.ForeignKey(Farmacia)
+    # farmacia = models.ForeignKey(Farmacia)
+
 
     def __str__(self):
         return self.nombre + " de " + str(self.farmacia)
 
 
+class Inventario(models.Model):
+    farmacia = models.ForeignKey(Farmacia, null=True)
+    medicamento = models.ForeignKey(Medicamento, null=True)
+    cantidad = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(99999999)])
+
+
 class Lote(models.Model):
-    medicamento = models.ForeignKey(Medicamento)
+    # medicamento = models.ForeignKey(Medicamento)
+    inventario = models.ForeignKey(Inventario, null=True)
     f_elaboracion = models.DateField()
     f_vencimiento = models.DateField()
     precio = models.DecimalField(max_digits=15, decimal_places=2)
@@ -61,8 +69,8 @@ class Lote(models.Model):
     activo = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
-        self.medicamento.stock += self.cantidad
-        self.medicamento.save()
+        self.inventario.cantidad += self.cantidad
+        self.inventario.save()
         super(Lote, self).save(*args, **kwargs)
 
     def __str__(self):

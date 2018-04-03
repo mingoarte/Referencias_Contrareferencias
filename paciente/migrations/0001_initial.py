@@ -9,7 +9,6 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('administrador', '0001_initial'),
-        ('medico', '0001_initial'),
     ]
 
     operations = [
@@ -17,8 +16,6 @@ class Migration(migrations.Migration):
             name='Historia',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('especialidad', models.ForeignKey(to='medico.Especialidad')),
-                ('medico', models.ForeignKey(to='medico.Medico')),
             ],
         ),
         migrations.CreateModel(
@@ -43,7 +40,6 @@ class Migration(migrations.Migration):
                 ('abdomen', models.CharField(max_length=200)),
                 ('extremidades', models.CharField(max_length=200)),
                 ('genitales', models.CharField(max_length=200)),
-                ('medico_triaje', models.ForeignKey(to='medico.Medico')),
             ],
         ),
         migrations.CreateModel(
