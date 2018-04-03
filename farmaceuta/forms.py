@@ -37,7 +37,7 @@ class FarmaciaFormEditar(forms.ModelForm):
 class MedicamentoForm(forms.ModelForm):
     class Meta:
         model = Medicamento
-        exclude = ["stock", "farmacia"]
+        fields = ['nombre','indicacion', 'posologia','tipo']
 
 
     def __init__(self, *args, **kwargs):

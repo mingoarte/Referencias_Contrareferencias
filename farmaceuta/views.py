@@ -227,8 +227,8 @@ class VerMedicamentos(TemplateView):
         context = super(
             VerMedicamentos, self).get_context_data(**kwargs)
         farmacia = Farmacia.objects.get(pk=int(self.kwargs['pk']))
-        medicamentos = Medicamento.objects.filter(farmacia=self.kwargs['pk'])
-        context['medicamentos'] = medicamentos
+        inventario = Inventario.objects.filter(farmacia=self.kwargs['pk'])
+        context['inventario'] = inventario
         context['farmacia'] = farmacia
         return context
 
@@ -269,9 +269,9 @@ class AgregarMedicamentos(TemplateView):
         farmacia = Farmacia.objects.get(pk=int(self.kwargs['pk']))
         form = MedicamentoForm(request.POST)
         if form.is_valid():
-            medicamento = form.save(commit=False)
-            medicamento.farmacia = farmacia
-            medicamento.save()
+            medicamento = form.save()
+            inventario = Inventario(farmacia=farmacia,medicamento=medicamento)
+            inventario.save()
             return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': farmacia.pk}))
         else:
             messages.error(request,"Por favor verifique los campos suguientes:")
