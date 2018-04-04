@@ -228,8 +228,17 @@ class VerMedicamentos(TemplateView):
             VerMedicamentos, self).get_context_data(**kwargs)
         farmacia = Farmacia.objects.get(pk=int(self.kwargs['pk']))
         inventario = Inventario.objects.filter(farmacia=self.kwargs['pk'])
+        medicamentos = Medicamento.objects.all()
+
+        medicamentos_ctx = []
+        for m in medicamentos:
+            medicamentos_ctx.append( (m, m.inventario_set.filter(farmacia=farmacia).first()) )
+            print medicamentos_ctx
+
         context['inventario'] = inventario
         context['farmacia'] = farmacia
+        context['medicamentos'] = medicamentos_ctx
+        
         return context
 
 
@@ -316,7 +325,7 @@ class ModificarMedicamento(TemplateView):
             institucion = Institucion.objects.get(id=request.POST['marca'])
             medicamento.marca = institucion
             medicamento.save()
-            return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': medicamento.farmacia.pk}))
+            return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': self.kwargs['farmacia']}))
         else:
             messages.error(request,"Por favor verifique los campos suguientes:")
             return render_to_response('farmaceuta/agregar_medicamentos.html',
@@ -349,11 +358,19 @@ class AgregarLoteMedicamento(TemplateView):
         print form.is_valid()
         print "form.is_valid()"
         if form.is_valid():
+            farmacia = Farmacia.objects.get(id=self.kwargs['farmacia'])
+            inv = Inventario.objects.get(farmacia=farmacia, medicamento=m)
+
+            if not inv:
+                inv = Inventario(farmacia=farmacia, medicamento=m)
+                inv.save()
+
+
             lote = form.save(commit=False)
-            lote.medicamento = m
-            lote.activo = not Lote.objects.filter(medicamento=m, activo=True).exists()
+            lote.inventario = inv
+            lote.activo = not Lote.objects.filter(inventario=inv, activo=True).exists()
             lote.save()
-            return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': m.farmacia.pk}))
+            return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': self.kwargs['farmacia']}))
         else:
             messages.error(request,"Por favor verifique los campos suguientes:")
             return render_to_response('farmaceuta/agregar_lote.html',

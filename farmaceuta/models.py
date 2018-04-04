@@ -41,7 +41,7 @@ class Medicamento(models.Model):
     nombre = models.CharField(max_length=256, blank=False)
     indicacion = models.TextField(max_length=512, blank=False)
     posologia = models.TextField(max_length=512, blank=False)
-    marca = models.ForeignKey(Institucion, limit_choices_to=Q(tipo='Laboratorio'), null=True)
+    marca = models.ForeignKey(Institucion, limit_choices_to=Q(tipo='Laboratorio'))
     # stock = models.PositiveIntegerField(default=0, validators=[MaxValueValidator(99999999)])
     tipo = models.CharField(max_length=32, choices={('grajeas', 'Grajeas'),
                                                     ('jarabe', 'Jarabe'),

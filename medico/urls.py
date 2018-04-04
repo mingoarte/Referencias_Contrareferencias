@@ -17,6 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.static import serve
 from medico.views import *
+from farmaceuta.controllers import *
 
 
 urlpatterns = [
@@ -29,6 +30,11 @@ urlpatterns = [
         r'^agregar-estudios/(?P<id>\w+)$',
         AgregarEstudios.as_view(),
         name='agregar_estudios'
+    ),
+    url(
+        r'^eliminar-recipe/(?P<pk>\w+)$',
+        'farmaceuta.controllers.eliminar_recipe',
+        name='eliminar_recipe'
     ),
     url(
         r'^modificar-estudios/(?P<id>\w+)$',
@@ -225,6 +231,11 @@ urlpatterns = [
         r'^agregar-recipe/',
         AgregarRecipe.as_view(),
         name='agregar_recipe'
+    ),
+    url(
+        r'^modificar-recipe/(?P<pk>\w+)$',
+        ModificarRecipe.as_view(),
+        name='modificar_recipe'
     ),
 
 ]

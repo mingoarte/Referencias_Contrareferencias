@@ -1406,3 +1406,86 @@ class AgregarRecipe(CreateView):
                                       {'form': form,
                                        'title': 'Agregar'},
                                       context_instance=RequestContext(request))
+
+
+class AgregarRecipe(CreateView):
+    template_name = 'medico/agregar_recipe.html'
+    form_class = RecipeForm
+
+    def get_context_data(self, **kwargs):
+        context = super(
+            AgregarRecipe, self).get_context_data(**kwargs)
+       
+
+        return context
+
+    def post(self, request, *args, **kwargs):
+        """
+        Handles POST requests, instantiating a form instance with the passed
+        POST variables and then checked for validity.
+        """
+        form = RecipeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse_lazy('ver_recipes'))
+        else:
+            messages.error(request,"Por favor verifique los campos suguientes:")
+            return render_to_response('medico/agregar_recipe.html',
+                                      {'form': form,
+                                       'title': 'Agregar'},
+                                      context_instance=RequestContext(request))
+
+
+class ModificarRecipe(CreateView):
+    template_name = 'medico/agregar_recipe.html'
+    form_class = RecipeForm
+
+    def get_context_data(self, **kwargs):
+        context = super(
+            ModificarRecipe, self).get_context_data(**kwargs)
+        recipe = RecipeMedico.objects.get(pk=self.kwargs['pk'])
+        form = RecipeForm(instance=recipe)
+                #     initial={
+                #              'medico': recipe.medico,
+                #              'medicamentos': recipe.medicamentos,
+                #              'paciente': recipe.paciente,
+                #             }
+                # )
+
+        context['title'] = 'Modificar'
+        context['form'] = form
+        context['recipe'] = recipe
+
+        return context
+
+    def post(self, request, *args, **kwargs):
+        """
+        Handles POST requests, instantiating a form instance with the passed
+        POST variables and then checked for validity.
+        """
+        recipe = RecipeMedico.objects.get(pk=self.kwargs['pk'])
+        form = RecipeForm(request.POST,instance=recipe)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse_lazy(
+                    'ver_recipes'))
+            # print('entro es valido')
+            # direccion = request.POST['direccion']
+            # institucion = request.POST.get('institucion',None)
+            # farmaceuta = request.POST.get('farmaceuta',None)
+            
+            # value = modificar_farmacia(self.kwargs['pk'], direccion, institucion, farmaceuta)
+
+            # if value is True:
+            # else:
+            #     return render_to_response('administrador/modificar_farmacia.html',
+            #                               {'form': form,
+            #                                'title': 'Modificar'},
+            #                               context_instance=RequestContext(
+            #                                   request))
+        else:
+            messages.error(request,"Por favor verifique los campos suguientes:")
+            return render_to_response('medico/agregar_recipe.html',
+                                      {'form': form,
+                                       'title': 'Agregar'},
+                                      context_instance=RequestContext(request))
