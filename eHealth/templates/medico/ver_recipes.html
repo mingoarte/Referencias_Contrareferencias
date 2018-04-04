@@ -15,7 +15,7 @@
       </tr>
       {% for res in recipes %}
       <!-- Modal content -->
-      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal fade" id="myModal{{res.pk}}" role="dialog">
 
       <div class="modal-dialog">
 
@@ -26,11 +26,11 @@
             <h4 class="modal-title">Eliminar Récipe</h4>
           </div>
           <div class="modal-body">
-            <p>¿Está seguro que desea eliminar este Recipe?</p>
+            <p>¿Está seguro que desea eliminar este récipe?</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-            <a type="button" class="btn btn-primary" href="" > Aceptar</a>
+            <a type="button" class="btn btn-primary" href="{% url 'eliminar_recipe' res.pk %}" > Aceptar</a>
           </div>
         </div>
 
@@ -46,8 +46,8 @@
           <td style="text-align: center;">{{res.paciente}}</td>
 
           <td style="text-align: center;">
-            <a href=""><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
-            <a data-toggle="modal" data-target="#myModal" ><i class="fa fa-trash" style="font-size:20px;color:#5882FA"></i></a>
+            <a href="{% url 'modificar_recipe' res.pk %}"><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
+            <a data-toggle="modal" data-target="#myModal{{res.pk}}" ><i class="fa fa-trash" style="font-size:20px;color:#5882FA"></i></a>
 
         </tr>
       {% endfor%}
