@@ -50,7 +50,7 @@ class Medicamento(models.Model):
 
 
     def __str__(self):
-        return self.nombre + " de " + str(self.farmacia)
+        return self.nombre 
 
 
 class Inventario(models.Model):

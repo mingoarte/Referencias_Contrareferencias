@@ -442,3 +442,9 @@ class Medico_HistorialForm(forms.ModelForm):
         model = Medico_Citas
         exclude = ("paciente","medico","institucion","fecha","descripcion",
             "hora","especialidad","revision","informe","es_referido",)
+
+class RecipeForm(forms.ModelForm):
+
+    class Meta:
+        model = RecipeMedico
+        fields = "__all__"

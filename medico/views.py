@@ -1366,3 +1366,42 @@ class VerHistorial(TemplateView):
         context['consulta'] = consulta
 
         return context
+
+class VerRecipes(TemplateView):
+    template_name = 'medico/ver_recipes.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(
+            VerRecipes, self).get_context_data(**kwargs)
+
+        Recipes = RecipeMedico.objects.all()
+        context['recipes'] = Recipes
+        return context
+
+class AgregarRecipe(CreateView):
+    template_name = 'medico/agregar_recipe.html'
+    form_class = RecipeForm
+
+    def get_context_data(self, **kwargs):
+        context = super(
+            AgregarRecipe, self).get_context_data(**kwargs)
+       
+        context['title'] = 'Agregar'
+
+        return context
+
+    def post(self, request, *args, **kwargs):
+        """
+        Handles POST requests, instantiating a form instance with the passed
+        POST variables and then checked for validity.
+        """
+        form = RecipeForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+        else:
+            messages.error(request,"Por favor verifique los campos suguientes:")
+            return render_to_response('medico/agregar_recipe.html',
+                                      {'form': form,
+                                       'title': 'Agregar'},
+                                      context_instance=RequestContext(request))

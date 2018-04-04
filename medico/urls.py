@@ -216,4 +216,15 @@ urlpatterns = [
         VerHistorial.as_view(),
         name='ver_historial'
     ),
+    url(
+        r'^ver-recipes/',
+        VerRecipes.as_view(),
+        name='ver_recipes'
+    ),
+    url(
+        r'^agregar-recipe/',
+        AgregarRecipe.as_view(),
+        name='agregar_recipe'
+    ),
+
 ]
