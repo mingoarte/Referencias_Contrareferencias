@@ -1373,9 +1373,10 @@ class VerRecipes(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(
             VerRecipes, self).get_context_data(**kwargs)
-
-        Recipes = RecipeMedico.objects.all()
-        context['recipes'] = Recipes
+        medico = self.request.user.usuario.medico_set.all().first()
+        print medico
+        recipes = RecipeMedico.objects.filter(medico=medico)
+        context['recipes'] = recipes
         return context
 
 class AgregarRecipe(CreateView):
