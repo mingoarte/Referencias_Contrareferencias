@@ -165,7 +165,7 @@ class Medico_Informe(models.Model):
 
 class RecipeMedico(models.Model):
     from farmaceuta.models import Medicamento
-    informe = models.ForeignKey(Medico_Informe)
+    medico = models.ForeignKey(Medico,null=True)
     medicamentos = models.ManyToManyField(Medicamento)
     paciente = models.ForeignKey(Paciente)
 
