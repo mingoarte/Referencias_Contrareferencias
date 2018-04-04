@@ -76,9 +76,8 @@ def eliminar_farmacia(request, pk):
     return HttpResponseRedirect(reverse_lazy(
         'ver_farmacias'))
 
-def eliminar_medicamento(request, pk):
+def eliminar_medicamento(request, pk, farmacia):
     medicamento = Medicamento.objects.get(pk=pk)
-    pk = medicamento.farmacia.pk
     medicamento.delete()
     return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': pk}))
 
@@ -87,3 +86,4 @@ def eliminar_recipe(request, pk):
     recipe.delete()
     return HttpResponseRedirect(reverse_lazy(
         'ver_recipes'))
+    return HttpResponseRedirect(reverse_lazy('ver_medicamentos', kwargs={'pk': farmacia}))

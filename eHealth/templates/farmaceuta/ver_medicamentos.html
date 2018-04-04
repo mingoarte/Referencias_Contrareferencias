@@ -18,9 +18,9 @@
         </tr>
       </thead>
       <tbody>
-      {% for medicamento in inventario %}
+      {% for medicamento in medicamentos %}
       <!-- Modal content -->
-        <div class="modal fade" id="myModal{{medicamento.medicamento.pk}}" role="dialog">
+        <div class="modal fade" id="myModal{{medicamento.0.pk}}" role="dialog">
           <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -34,21 +34,30 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                <a type="button" class="btn btn-primary" href="{% url 'eliminar_medicamentos' medicamento.medicamento.pk %}" > Aceptar</a>
+                <a type="button" class="btn btn-primary" href="{% url 'eliminar_medicamentos' medicamento.0.pk farmacia.pk %}" > Aceptar</a>
               </div>
             </div>
           </div>
         </div>
       
         <tr>
-          <td style="text-align: center;">{{medicamento.medicamento.nombre}}</td>
-          <td style="text-align: center;">{{medicamento.medicamento.tipo}}</td>
-          <td style="text-align: center;">{{medicamento.medicamento.marca}}</td>
-          <td style="text-align: center;">{{medicamento.medicamento.stock}} &nbsp;&nbsp; <a href="{% url 'agregar_lote' medicamento.medicamento.pk %}" title="Agregar inventario"><i class="fa fa-plus" style="font-size:14px;color:#5882FA"></i></a></td>
+          <td style="text-align: center;">{{medicamento.0.nombre}}</td>
+          <td style="text-align: center;">{{medicamento.0.tipo}}</td>
+          <td style="text-align: center;">{{medicamento.0.marca}}</td>
+          <td style="text-align: center;">
+            {% if medicamento.1.cantidad %}
+            {{medicamento.1.cantidad}}
+            {% else %}
+            0
+            {% endif %}
+            &nbsp;&nbsp; <a href="{% url 'agregar_lote' medicamento.0.pk farmacia.pk %}" title="Agregar inventario">
+              <i class="fa fa-plus" style="font-size:14px;color:#5882FA"></i>
+            </a>
+          </td>
 
           <td style="text-align: center;">
-            <a href="{% url 'modificar_medicamento' medicamento.medicamento.pk %}"><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
-            <a data-toggle="modal" data-target="#myModal{{medicamento.medicamento.pk}}" ><i class="fa fa-trash" style="font-size:20px;color:#5882FA"></i></a>
+            <a href="{% url 'modificar_medicamento' medicamento.0.pk farmacia.pk %}"><i class="fa fa-pencil" style="font-size:20px;color:#5882FA"></i></a>
+            <a data-toggle="modal" data-target="#myModal{{medicamento.0.pk}}" ><i class="fa fa-trash" style="font-size:20px;color:#5882FA"></i></a>
           </td>
         </tr>
       {% endfor%}

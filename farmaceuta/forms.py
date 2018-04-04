@@ -37,7 +37,7 @@ class FarmaciaFormEditar(forms.ModelForm):
 class MedicamentoForm(forms.ModelForm):
     class Meta:
         model = Medicamento
-        fields = ['nombre','indicacion', 'posologia','tipo']
+        fields = ['nombre', 'indicacion', 'posologia', 'tipo', 'marca']
 
 
     def __init__(self, *args, **kwargs):
@@ -47,7 +47,7 @@ class MedicamentoForm(forms.ModelForm):
 class LoteForm(forms.ModelForm):
     class Meta:
         model = Lote
-        exclude = ["activo", "medicamento"]
+        exclude = ["activo", "inventario"]
 
 
     def __init__(self, *args, **kwargs):
