@@ -1,0 +1,3276 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.5.12
+-- Dumped by pg_dump version 9.5.12
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: administrador_inbox; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.administrador_inbox (
+    id integer NOT NULL,
+    asunto character varying(100) NOT NULL,
+    enviado_por character varying(100) NOT NULL,
+    usuario_id integer NOT NULL
+);
+
+
+ALTER TABLE public.administrador_inbox OWNER TO ehealth_user;
+
+--
+-- Name: administrador_inbox_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.administrador_inbox_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.administrador_inbox_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: administrador_inbox_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.administrador_inbox_id_seq OWNED BY public.administrador_inbox.id;
+
+
+--
+-- Name: administrador_usuario; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.administrador_usuario (
+    id integer NOT NULL,
+    ci character varying(100) NOT NULL,
+    foto character varying(100) NOT NULL,
+    fotosubida boolean NOT NULL,
+    user_id integer NOT NULL
+);
+
+
+ALTER TABLE public.administrador_usuario OWNER TO ehealth_user;
+
+--
+-- Name: administrador_usuario_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.administrador_usuario_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.administrador_usuario_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: administrador_usuario_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.administrador_usuario_id_seq OWNED BY public.administrador_usuario.id;
+
+
+--
+-- Name: auth_group; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.auth_group (
+    id integer NOT NULL,
+    name character varying(80) NOT NULL
+);
+
+
+ALTER TABLE public.auth_group OWNER TO ehealth_user;
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.auth_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.auth_group_id_seq OWNED BY public.auth_group.id;
+
+
+--
+-- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.auth_group_permissions (
+    id integer NOT NULL,
+    group_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_group_permissions OWNER TO ehealth_user;
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.auth_group_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_permissions_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.auth_group_permissions_id_seq OWNED BY public.auth_group_permissions.id;
+
+
+--
+-- Name: auth_permission; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.auth_permission (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    content_type_id integer NOT NULL,
+    codename character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.auth_permission OWNER TO ehealth_user;
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.auth_permission_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_permission_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.auth_permission_id_seq OWNED BY public.auth_permission.id;
+
+
+--
+-- Name: auth_user; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.auth_user (
+    id integer NOT NULL,
+    password character varying(128) NOT NULL,
+    last_login timestamp with time zone,
+    is_superuser boolean NOT NULL,
+    username character varying(30) NOT NULL,
+    first_name character varying(30) NOT NULL,
+    last_name character varying(30) NOT NULL,
+    email character varying(254) NOT NULL,
+    is_staff boolean NOT NULL,
+    is_active boolean NOT NULL,
+    date_joined timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.auth_user OWNER TO ehealth_user;
+
+--
+-- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.auth_user_groups (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    group_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_groups OWNER TO ehealth_user;
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.auth_user_groups_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_groups_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.auth_user_groups_id_seq OWNED BY public.auth_user_groups.id;
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.auth_user_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.auth_user_id_seq OWNED BY public.auth_user.id;
+
+
+--
+-- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.auth_user_user_permissions (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_user_permissions OWNER TO ehealth_user;
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.auth_user_user_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_user_permissions_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.auth_user_user_permissions_id_seq OWNED BY public.auth_user_user_permissions.id;
+
+
+--
+-- Name: django_admin_log; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.django_admin_log (
+    id integer NOT NULL,
+    action_time timestamp with time zone NOT NULL,
+    object_id text,
+    object_repr character varying(200) NOT NULL,
+    action_flag smallint NOT NULL,
+    change_message text NOT NULL,
+    content_type_id integer,
+    user_id integer NOT NULL,
+    CONSTRAINT django_admin_log_action_flag_check CHECK ((action_flag >= 0))
+);
+
+
+ALTER TABLE public.django_admin_log OWNER TO ehealth_user;
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.django_admin_log_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_admin_log_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.django_admin_log_id_seq OWNED BY public.django_admin_log.id;
+
+
+--
+-- Name: django_content_type; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.django_content_type (
+    id integer NOT NULL,
+    app_label character varying(100) NOT NULL,
+    model character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.django_content_type OWNER TO ehealth_user;
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.django_content_type_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_content_type_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.django_content_type_id_seq OWNED BY public.django_content_type.id;
+
+
+--
+-- Name: django_migrations; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.django_migrations (
+    id integer NOT NULL,
+    app character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    applied timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_migrations OWNER TO ehealth_user;
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.django_migrations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_migrations_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.django_migrations_id_seq OWNED BY public.django_migrations.id;
+
+
+--
+-- Name: django_session; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.django_session (
+    session_key character varying(40) NOT NULL,
+    session_data text NOT NULL,
+    expire_date timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_session OWNER TO ehealth_user;
+
+--
+-- Name: farmaceuta_farmaceuta; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.farmaceuta_farmaceuta (
+    cedula integer NOT NULL,
+    first_name character varying(30),
+    last_name character varying(30),
+    fecha_nacimiento date,
+    sexo character varying(10),
+    estado_civil character varying(15),
+    telefono character varying(15),
+    direccion character varying(100),
+    usuario_id integer NOT NULL
+);
+
+
+ALTER TABLE public.farmaceuta_farmaceuta OWNER TO ehealth_user;
+
+--
+-- Name: farmaceuta_farmacia; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.farmaceuta_farmacia (
+    id integer NOT NULL,
+    rif character varying(12) NOT NULL,
+    nombre character varying(100) NOT NULL,
+    direccion character varying(255) NOT NULL,
+    farmaceuta_id integer,
+    institucion_id integer
+);
+
+
+ALTER TABLE public.farmaceuta_farmacia OWNER TO ehealth_user;
+
+--
+-- Name: farmaceuta_farmacia_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.farmaceuta_farmacia_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.farmaceuta_farmacia_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: farmaceuta_farmacia_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.farmaceuta_farmacia_id_seq OWNED BY public.farmaceuta_farmacia.id;
+
+
+--
+-- Name: farmaceuta_inventario; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.farmaceuta_inventario (
+    id integer NOT NULL,
+    cantidad integer NOT NULL,
+    farmacia_id integer,
+    medicamento_id integer,
+    CONSTRAINT farmaceuta_inventario_cantidad_check CHECK ((cantidad >= 0))
+);
+
+
+ALTER TABLE public.farmaceuta_inventario OWNER TO ehealth_user;
+
+--
+-- Name: farmaceuta_inventario_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.farmaceuta_inventario_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.farmaceuta_inventario_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: farmaceuta_inventario_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.farmaceuta_inventario_id_seq OWNED BY public.farmaceuta_inventario.id;
+
+
+--
+-- Name: farmaceuta_lote; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.farmaceuta_lote (
+    id integer NOT NULL,
+    f_elaboracion date NOT NULL,
+    f_vencimiento date NOT NULL,
+    precio numeric(15,2) NOT NULL,
+    cantidad integer NOT NULL,
+    activo boolean NOT NULL,
+    inventario_id integer,
+    CONSTRAINT farmaceuta_lote_cantidad_check CHECK ((cantidad >= 0))
+);
+
+
+ALTER TABLE public.farmaceuta_lote OWNER TO ehealth_user;
+
+--
+-- Name: farmaceuta_lote_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.farmaceuta_lote_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.farmaceuta_lote_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: farmaceuta_lote_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.farmaceuta_lote_id_seq OWNED BY public.farmaceuta_lote.id;
+
+
+--
+-- Name: farmaceuta_medicamento; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.farmaceuta_medicamento (
+    id integer NOT NULL,
+    nombre character varying(256) NOT NULL,
+    indicacion text NOT NULL,
+    posologia text NOT NULL,
+    tipo character varying(32) NOT NULL,
+    marca_id integer NOT NULL
+);
+
+
+ALTER TABLE public.farmaceuta_medicamento OWNER TO ehealth_user;
+
+--
+-- Name: farmaceuta_medicamento_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.farmaceuta_medicamento_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.farmaceuta_medicamento_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: farmaceuta_medicamento_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.farmaceuta_medicamento_id_seq OWNED BY public.farmaceuta_medicamento.id;
+
+
+--
+-- Name: medico_especialidad; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_especialidad (
+    nombre_especialidad character varying(30) NOT NULL
+);
+
+
+ALTER TABLE public.medico_especialidad OWNER TO ehealth_user;
+
+--
+-- Name: medico_institucion; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_institucion (
+    id integer NOT NULL,
+    rif character varying(12) NOT NULL,
+    name character varying(100) NOT NULL,
+    address character varying(255) NOT NULL,
+    tipo character varying(30) NOT NULL
+);
+
+
+ALTER TABLE public.medico_institucion OWNER TO ehealth_user;
+
+--
+-- Name: medico_institucion_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_institucion_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_institucion_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_institucion_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_institucion_id_seq OWNED BY public.medico_institucion.id;
+
+
+--
+-- Name: medico_medico; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico (
+    cedula integer NOT NULL,
+    first_name character varying(30),
+    last_name character varying(30),
+    fecha_nacimiento date,
+    sexo character varying(10),
+    estado_civil character varying(15),
+    telefono character varying(15),
+    direccion character varying(100),
+    usuario_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_citas; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico_citas (
+    id integer NOT NULL,
+    fecha date NOT NULL,
+    descripcion character varying(500) NOT NULL,
+    hora character varying(5) NOT NULL,
+    revision boolean NOT NULL,
+    informe boolean NOT NULL,
+    es_referido boolean NOT NULL,
+    especialidad_id character varying(30) NOT NULL,
+    institucion_id integer NOT NULL,
+    medico_id integer NOT NULL,
+    paciente_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico_citas OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_citas_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_medico_citas_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_medico_citas_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_citas_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_medico_citas_id_seq OWNED BY public.medico_medico_citas.id;
+
+
+--
+-- Name: medico_medico_especialidad; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico_especialidad (
+    id integer NOT NULL,
+    horario character varying(1000) NOT NULL,
+    especialidad_id character varying(30) NOT NULL,
+    institucion_id integer NOT NULL,
+    medico_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico_especialidad OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_especialidad_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_medico_especialidad_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_medico_especialidad_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_especialidad_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_medico_especialidad_id_seq OWNED BY public.medico_medico_especialidad.id;
+
+
+--
+-- Name: medico_medico_estudios; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico_estudios (
+    id integer NOT NULL,
+    titulo character varying(500) NOT NULL,
+    fecha_graduacion date NOT NULL,
+    descripcion character varying(500) NOT NULL,
+    institucion character varying(500) NOT NULL,
+    medico_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico_estudios OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_estudios_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_medico_estudios_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_medico_estudios_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_estudios_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_medico_estudios_id_seq OWNED BY public.medico_medico_estudios.id;
+
+
+--
+-- Name: medico_medico_eventos; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico_eventos (
+    id integer NOT NULL,
+    titulo character varying(500) NOT NULL,
+    descripcion character varying(500) NOT NULL,
+    institucion character varying(500) NOT NULL,
+    date date NOT NULL,
+    medico_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico_eventos OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_eventos_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_medico_eventos_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_medico_eventos_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_eventos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_medico_eventos_id_seq OWNED BY public.medico_medico_eventos.id;
+
+
+--
+-- Name: medico_medico_experiencias; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico_experiencias (
+    id integer NOT NULL,
+    titulo character varying(500) NOT NULL,
+    descripcion character varying(500) NOT NULL,
+    fecha_inicio date NOT NULL,
+    fecha_fin date NOT NULL,
+    institucion character varying(500) NOT NULL,
+    medico_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico_experiencias OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_experiencias_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_medico_experiencias_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_medico_experiencias_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_experiencias_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_medico_experiencias_id_seq OWNED BY public.medico_medico_experiencias.id;
+
+
+--
+-- Name: medico_medico_habilidades; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico_habilidades (
+    id integer NOT NULL,
+    titulo character varying(500) NOT NULL,
+    descripcion character varying(500) NOT NULL,
+    medico_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico_habilidades OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_habilidades_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_medico_habilidades_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_medico_habilidades_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_habilidades_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_medico_habilidades_id_seq OWNED BY public.medico_medico_habilidades.id;
+
+
+--
+-- Name: medico_medico_informe; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico_informe (
+    id integer NOT NULL,
+    desc_prediagnostico text NOT NULL,
+    "medico_Revision_id" integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico_informe OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_informe_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_medico_informe_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_medico_informe_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_informe_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_medico_informe_id_seq OWNED BY public.medico_medico_informe.id;
+
+
+--
+-- Name: medico_medico_logros; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico_logros (
+    id integer NOT NULL,
+    titulo character varying(500) NOT NULL,
+    fecha date NOT NULL,
+    descripcion character varying(500) NOT NULL,
+    medico_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico_logros OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_logros_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_medico_logros_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_medico_logros_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_logros_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_medico_logros_id_seq OWNED BY public.medico_medico_logros.id;
+
+
+--
+-- Name: medico_medico_publicaciones; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico_publicaciones (
+    id integer NOT NULL,
+    titulo character varying(100) NOT NULL,
+    autores character varying(100) NOT NULL,
+    descripcion character varying(500) NOT NULL,
+    revista character varying(100) NOT NULL,
+    numero character varying(5) NOT NULL,
+    volumen character varying(5) NOT NULL,
+    fecha date NOT NULL,
+    medico_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico_publicaciones OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_publicaciones_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_medico_publicaciones_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_medico_publicaciones_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_medico_publicaciones_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_medico_publicaciones_id_seq OWNED BY public.medico_medico_publicaciones.id;
+
+
+--
+-- Name: medico_medico_revision; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_medico_revision (
+    cita_id integer NOT NULL,
+    motivos character varying(500) NOT NULL,
+    sintomas character varying(500) NOT NULL,
+    presion_sanguinea_diastolica integer NOT NULL,
+    presion_sanguinea_sistolica integer NOT NULL,
+    temperatura integer NOT NULL,
+    frec_respiratoria integer NOT NULL,
+    frec_cardiaca integer NOT NULL,
+    otros character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.medico_medico_revision OWNER TO ehealth_user;
+
+--
+-- Name: medico_recipemedico; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_recipemedico (
+    id integer NOT NULL,
+    paciente_id integer NOT NULL,
+    medico_id integer
+);
+
+
+ALTER TABLE public.medico_recipemedico OWNER TO ehealth_user;
+
+--
+-- Name: medico_recipemedico_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_recipemedico_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_recipemedico_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_recipemedico_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_recipemedico_id_seq OWNED BY public.medico_recipemedico.id;
+
+
+--
+-- Name: medico_recipemedico_medicamentos; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_recipemedico_medicamentos (
+    id integer NOT NULL,
+    recipemedico_id integer NOT NULL,
+    medicamento_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_recipemedico_medicamentos OWNER TO ehealth_user;
+
+--
+-- Name: medico_recipemedico_medicamentos_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_recipemedico_medicamentos_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_recipemedico_medicamentos_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_recipemedico_medicamentos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_recipemedico_medicamentos_id_seq OWNED BY public.medico_recipemedico_medicamentos.id;
+
+
+--
+-- Name: medico_referencia; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.medico_referencia (
+    id integer NOT NULL,
+    fecha date NOT NULL,
+    descripcion character varying(500) NOT NULL,
+    hora character varying(5) NOT NULL,
+    archivo character varying(100) NOT NULL,
+    cita_id integer NOT NULL,
+    especialidad_id character varying(30) NOT NULL,
+    institucion_id integer NOT NULL,
+    medico_id integer NOT NULL,
+    paciente_id integer NOT NULL
+);
+
+
+ALTER TABLE public.medico_referencia OWNER TO ehealth_user;
+
+--
+-- Name: medico_referencia_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.medico_referencia_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.medico_referencia_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: medico_referencia_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.medico_referencia_id_seq OWNED BY public.medico_referencia.id;
+
+
+--
+-- Name: paciente_historia; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.paciente_historia (
+    id integer NOT NULL,
+    paciente_id integer NOT NULL,
+    especialidad_id character varying(30),
+    medico_id integer
+);
+
+
+ALTER TABLE public.paciente_historia OWNER TO ehealth_user;
+
+--
+-- Name: paciente_historia_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.paciente_historia_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.paciente_historia_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: paciente_historia_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.paciente_historia_id_seq OWNED BY public.paciente_historia.id;
+
+
+--
+-- Name: paciente_historiadetriaje; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.paciente_historiadetriaje (
+    id integer NOT NULL,
+    antecedentes_personales character varying(500) NOT NULL,
+    antecedentes_familiares character varying(500) NOT NULL,
+    motivo_consulta character varying(200) NOT NULL,
+    enfermedad_actual character varying(200) NOT NULL,
+    peso numeric(5,2) NOT NULL,
+    talla numeric(5,2) NOT NULL,
+    signos_vitales character varying(200) NOT NULL,
+    piel character varying(200) NOT NULL,
+    ojos character varying(200) NOT NULL,
+    fosas_nasales character varying(200) NOT NULL,
+    conductos_auditivos character varying(200) NOT NULL,
+    cavidad_oral character varying(200) NOT NULL,
+    cuello character varying(200) NOT NULL,
+    columna character varying(200) NOT NULL,
+    torax character varying(200) NOT NULL,
+    abdomen character varying(200) NOT NULL,
+    extremidades character varying(200) NOT NULL,
+    genitales character varying(200) NOT NULL,
+    paciente_id integer NOT NULL,
+    medico_triaje_id integer
+);
+
+
+ALTER TABLE public.paciente_historiadetriaje OWNER TO ehealth_user;
+
+--
+-- Name: paciente_historiadetriaje_id_seq; Type: SEQUENCE; Schema: public; Owner: ehealth_user
+--
+
+CREATE SEQUENCE public.paciente_historiadetriaje_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.paciente_historiadetriaje_id_seq OWNER TO ehealth_user;
+
+--
+-- Name: paciente_historiadetriaje_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ehealth_user
+--
+
+ALTER SEQUENCE public.paciente_historiadetriaje_id_seq OWNED BY public.paciente_historiadetriaje.id;
+
+
+--
+-- Name: paciente_paciente; Type: TABLE; Schema: public; Owner: ehealth_user
+--
+
+CREATE TABLE public.paciente_paciente (
+    cedula integer NOT NULL,
+    first_name character varying(30),
+    last_name character varying(30),
+    fecha_nacimiento date,
+    lugar_nacimiento character varying(70),
+    sexo character varying(10),
+    estado_civil character varying(7),
+    ocupacion character varying(30),
+    direccion character varying(70),
+    telefono character varying(13),
+    usuario_id integer NOT NULL
+);
+
+
+ALTER TABLE public.paciente_paciente OWNER TO ehealth_user;
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.administrador_inbox ALTER COLUMN id SET DEFAULT nextval('public.administrador_inbox_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.administrador_usuario ALTER COLUMN id SET DEFAULT nextval('public.administrador_usuario_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_group ALTER COLUMN id SET DEFAULT nextval('public.auth_group_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_group_permissions ALTER COLUMN id SET DEFAULT nextval('public.auth_group_permissions_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_permission ALTER COLUMN id SET DEFAULT nextval('public.auth_permission_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user ALTER COLUMN id SET DEFAULT nextval('public.auth_user_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user_groups ALTER COLUMN id SET DEFAULT nextval('public.auth_user_groups_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions ALTER COLUMN id SET DEFAULT nextval('public.auth_user_user_permissions_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.django_admin_log ALTER COLUMN id SET DEFAULT nextval('public.django_admin_log_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.django_content_type ALTER COLUMN id SET DEFAULT nextval('public.django_content_type_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.django_migrations ALTER COLUMN id SET DEFAULT nextval('public.django_migrations_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_farmacia ALTER COLUMN id SET DEFAULT nextval('public.farmaceuta_farmacia_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_inventario ALTER COLUMN id SET DEFAULT nextval('public.farmaceuta_inventario_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_lote ALTER COLUMN id SET DEFAULT nextval('public.farmaceuta_lote_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_medicamento ALTER COLUMN id SET DEFAULT nextval('public.farmaceuta_medicamento_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_institucion ALTER COLUMN id SET DEFAULT nextval('public.medico_institucion_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_citas ALTER COLUMN id SET DEFAULT nextval('public.medico_medico_citas_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_especialidad ALTER COLUMN id SET DEFAULT nextval('public.medico_medico_especialidad_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_estudios ALTER COLUMN id SET DEFAULT nextval('public.medico_medico_estudios_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_eventos ALTER COLUMN id SET DEFAULT nextval('public.medico_medico_eventos_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_experiencias ALTER COLUMN id SET DEFAULT nextval('public.medico_medico_experiencias_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_habilidades ALTER COLUMN id SET DEFAULT nextval('public.medico_medico_habilidades_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_informe ALTER COLUMN id SET DEFAULT nextval('public.medico_medico_informe_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_logros ALTER COLUMN id SET DEFAULT nextval('public.medico_medico_logros_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_publicaciones ALTER COLUMN id SET DEFAULT nextval('public.medico_medico_publicaciones_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_recipemedico ALTER COLUMN id SET DEFAULT nextval('public.medico_recipemedico_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_recipemedico_medicamentos ALTER COLUMN id SET DEFAULT nextval('public.medico_recipemedico_medicamentos_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_referencia ALTER COLUMN id SET DEFAULT nextval('public.medico_referencia_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_historia ALTER COLUMN id SET DEFAULT nextval('public.paciente_historia_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_historiadetriaje ALTER COLUMN id SET DEFAULT nextval('public.paciente_historiadetriaje_id_seq'::regclass);
+
+
+--
+-- Data for Name: administrador_inbox; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.administrador_inbox (id, asunto, enviado_por, usuario_id) FROM stdin;
+\.
+
+
+--
+-- Name: administrador_inbox_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.administrador_inbox_id_seq', 1, false);
+
+
+--
+-- Data for Name: administrador_usuario; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.administrador_usuario (id, ci, foto, fotosubida, user_id) FROM stdin;
+2	24211328		f	3
+3	24211328		f	4
+4	24211328		f	5
+\.
+
+
+--
+-- Name: administrador_usuario_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.administrador_usuario_id_seq', 4, true);
+
+
+--
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.auth_group (id, name) FROM stdin;
+1	farmaceuta
+2	medico
+3	paciente
+4	admin
+\.
+
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.auth_group_id_seq', 4, true);
+
+
+--
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.auth_group_permissions (id, group_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
+1	Can add content type	1	add_contenttype
+2	Can change content type	1	change_contenttype
+3	Can delete content type	1	delete_contenttype
+4	Can add log entry	2	add_logentry
+5	Can change log entry	2	change_logentry
+6	Can delete log entry	2	delete_logentry
+7	Can add permission	5	add_permission
+8	Can change permission	5	change_permission
+9	Can delete permission	5	delete_permission
+10	Can add group	3	add_group
+11	Can change group	3	change_group
+12	Can delete group	3	delete_group
+13	Can add user	4	add_user
+14	Can change user	4	change_user
+15	Can delete user	4	delete_user
+16	Can add session	6	add_session
+17	Can change session	6	change_session
+18	Can delete session	6	delete_session
+19	Can add usuario	8	add_usuario
+20	Can change usuario	8	change_usuario
+21	Can delete usuario	8	delete_usuario
+22	Can add inbox	7	add_inbox
+23	Can change inbox	7	change_inbox
+24	Can delete inbox	7	delete_inbox
+25	Can add medico	11	add_medico
+26	Can change medico	11	change_medico
+27	Can delete medico	11	delete_medico
+28	Can add especialidad	15	add_especialidad
+29	Can change especialidad	15	change_especialidad
+30	Can delete especialidad	15	delete_especialidad
+31	Can add institucion	16	add_institucion
+32	Can change institucion	16	change_institucion
+33	Can delete institucion	16	delete_institucion
+34	Can add medico_ especialidad	9	add_medico_especialidad
+35	Can change medico_ especialidad	9	change_medico_especialidad
+36	Can delete medico_ especialidad	9	delete_medico_especialidad
+37	Can add medico_ estudios	21	add_medico_estudios
+38	Can change medico_ estudios	21	change_medico_estudios
+39	Can delete medico_ estudios	21	delete_medico_estudios
+40	Can add medico_ habilidades	12	add_medico_habilidades
+41	Can change medico_ habilidades	12	change_medico_habilidades
+42	Can delete medico_ habilidades	12	delete_medico_habilidades
+43	Can add medico_ experiencias	22	add_medico_experiencias
+44	Can change medico_ experiencias	22	change_medico_experiencias
+45	Can delete medico_ experiencias	22	delete_medico_experiencias
+46	Can add medico_ logros	18	add_medico_logros
+47	Can change medico_ logros	18	change_medico_logros
+48	Can delete medico_ logros	18	delete_medico_logros
+49	Can add medico_ publicaciones	14	add_medico_publicaciones
+50	Can change medico_ publicaciones	14	change_medico_publicaciones
+51	Can delete medico_ publicaciones	14	delete_medico_publicaciones
+52	Can add medico_ eventos	20	add_medico_eventos
+53	Can change medico_ eventos	20	change_medico_eventos
+54	Can delete medico_ eventos	20	delete_medico_eventos
+55	Can add medico_ citas	17	add_medico_citas
+56	Can change medico_ citas	17	change_medico_citas
+57	Can delete medico_ citas	17	delete_medico_citas
+58	Can add medico_ revision	13	add_medico_revision
+59	Can change medico_ revision	13	change_medico_revision
+60	Can delete medico_ revision	13	delete_medico_revision
+61	Can add medico_ informe	23	add_medico_informe
+62	Can change medico_ informe	23	change_medico_informe
+63	Can delete medico_ informe	23	delete_medico_informe
+64	Can add recipe medico	19	add_recipemedico
+65	Can change recipe medico	19	change_recipemedico
+66	Can delete recipe medico	19	delete_recipemedico
+67	Can add referencia	10	add_referencia
+68	Can change referencia	10	change_referencia
+69	Can delete referencia	10	delete_referencia
+70	Can add paciente	26	add_paciente
+71	Can change paciente	26	change_paciente
+72	Can delete paciente	26	delete_paciente
+73	Can add historiadetriaje	25	add_historiadetriaje
+74	Can change historiadetriaje	25	change_historiadetriaje
+75	Can delete historiadetriaje	25	delete_historiadetriaje
+76	Can add historia	24	add_historia
+77	Can change historia	24	change_historia
+78	Can delete historia	24	delete_historia
+79	Can add farmaceuta	27	add_farmaceuta
+80	Can change farmaceuta	27	change_farmaceuta
+81	Can delete farmaceuta	27	delete_farmaceuta
+82	Can add farmacia	30	add_farmacia
+83	Can change farmacia	30	change_farmacia
+84	Can delete farmacia	30	delete_farmacia
+85	Can add medicamento	29	add_medicamento
+86	Can change medicamento	29	change_medicamento
+87	Can delete medicamento	29	delete_medicamento
+88	Can add inventario	28	add_inventario
+89	Can change inventario	28	change_inventario
+90	Can delete inventario	28	delete_inventario
+91	Can add lote	31	add_lote
+92	Can change lote	31	change_lote
+93	Can delete lote	31	delete_lote
+\.
+
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 93, true);
+
+
+--
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
+4	pbkdf2_sha256$20000$ZjkuBrCoisZz$hHUnvfZi6oUom+Rq1J/DHSggW7aoben/V9nZkq0x7Zc=	\N	f	edwar_m	Edwar	Yepez	edwar@medico.com	f	t	2018-04-03 10:49:59.48921-04
+5	pbkdf2_sha256$20000$CO5kTfbJqCHc$Jh/ej978oA1tWrHdlMoSlyTkL+Fxf16of1P2QdyQ/Xk=	\N	f	edwar_p	Edwar	Yepez	edwar@paciente.com	f	t	2018-04-03 10:50:36.96294-04
+2	pbkdf2_sha256$20000$VYuh8Tq9kDtj$86/ObkzU3jbmO5Mu5kT0hnkxhaJGqpUZktkO+757yHQ=	2018-04-04 10:35:25.432831-04	t	edwar			edwarypz@gmail.com	t	t	2018-04-03 10:43:04-04
+3	pbkdf2_sha256$20000$Jme0nA2AvaGy$7p3eVbNqyoizPz2z9TY5X5B/8QVpS5kahgPm9lLjVEk=	2018-04-04 10:36:50.905299-04	f	edwar_f	Edwar	Yepez	edwar@farmaceuta.com	f	t	2018-04-03 10:47:28.529534-04
+\.
+
+
+--
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.auth_user_groups (id, user_id, group_id) FROM stdin;
+1	2	4
+2	3	1
+3	4	2
+4	5	3
+\.
+
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 4, true);
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.auth_user_id_seq', 5, true);
+
+
+--
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
+1	2018-04-03 10:43:54.06881-04	1	farmaceuta	1		3	2
+2	2018-04-03 10:44:00.478299-04	2	medico	1		3	2
+3	2018-04-03 10:44:06.573067-04	3	paciente	1		3	2
+4	2018-04-03 10:45:11.567447-04	4	admin	1		3	2
+5	2018-04-03 10:45:35.879644-04	1	edwar_a	3		4	2
+6	2018-04-03 10:45:53.123514-04	2	edwar	2	Changed groups.	4	2
+\.
+
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.django_admin_log_id_seq', 6, true);
+
+
+--
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.django_content_type (id, app_label, model) FROM stdin;
+1	contenttypes	contenttype
+2	admin	logentry
+3	auth	group
+4	auth	user
+5	auth	permission
+6	sessions	session
+7	administrador	inbox
+8	administrador	usuario
+9	medico	medico_especialidad
+10	medico	referencia
+11	medico	medico
+12	medico	medico_habilidades
+13	medico	medico_revision
+14	medico	medico_publicaciones
+15	medico	especialidad
+16	medico	institucion
+17	medico	medico_citas
+18	medico	medico_logros
+19	medico	recipemedico
+20	medico	medico_eventos
+21	medico	medico_estudios
+22	medico	medico_experiencias
+23	medico	medico_informe
+24	paciente	historia
+25	paciente	historiadetriaje
+26	paciente	paciente
+27	farmaceuta	farmaceuta
+28	farmaceuta	inventario
+29	farmaceuta	medicamento
+30	farmaceuta	farmacia
+31	farmaceuta	lote
+\.
+
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 31, true);
+
+
+--
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.django_migrations (id, app, name, applied) FROM stdin;
+1	contenttypes	0001_initial	2018-04-03 10:25:13.04663-04
+2	auth	0001_initial	2018-04-03 10:25:15.194722-04
+3	admin	0001_initial	2018-04-03 10:25:15.457505-04
+4	administrador	0001_initial	2018-04-03 10:25:15.741655-04
+5	contenttypes	0002_remove_content_type_name	2018-04-03 10:25:15.838826-04
+6	auth	0002_alter_permission_name_max_length	2018-04-03 10:25:15.883436-04
+7	auth	0003_alter_user_email_max_length	2018-04-03 10:25:15.95085-04
+8	auth	0004_alter_user_username_opts	2018-04-03 10:25:15.998294-04
+9	auth	0005_alter_user_last_login_null	2018-04-03 10:25:16.054755-04
+10	auth	0006_require_contenttypes_0002	2018-04-03 10:25:16.072488-04
+11	paciente	0001_initial	2018-04-03 10:25:16.622409-04
+12	medico	0001_initial	2018-04-03 10:25:23.490184-04
+13	farmaceuta	0001_initial	2018-04-03 10:25:25.304944-04
+14	medico	0002_recipemedico_medicamentos	2018-04-03 10:25:25.713531-04
+15	paciente	0002_auto_20180403_1418	2018-04-03 10:25:26.149198-04
+16	sessions	0001_initial	2018-04-03 10:25:26.839222-04
+17	medico	0003_auto_20180404_1342	2018-04-04 09:52:06.722854-04
+18	farmaceuta	0002_medicamento_marca	2018-04-04 09:52:06.918538-04
+19	farmaceuta	0003_auto_20180404_1401	2018-04-04 10:01:33.335429-04
+\.
+
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 19, true);
+
+
+--
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.django_session (session_key, session_data, expire_date) FROM stdin;
+avxeqqrgjvysf2nji7vb58uz8nf07v8x	ODA0N2JmZjg0OTY0MmQ4ZTIzNzgxY2U3ZTJmY2RkOGVjMzVjZjZkYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImJkYTVkMGI1ZmVjMjY5N2FlY2Q1MzEwNjg5MWY2NmE1OWQ5MTY3ZTQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIzIn0=	2018-04-18 10:36:50.92185-04
+\.
+
+
+--
+-- Data for Name: farmaceuta_farmaceuta; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.farmaceuta_farmaceuta (cedula, first_name, last_name, fecha_nacimiento, sexo, estado_civil, telefono, direccion, usuario_id) FROM stdin;
+24211328	Edwar	Yepez	\N	\N	\N	\N	\N	2
+\.
+
+
+--
+-- Data for Name: farmaceuta_farmacia; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.farmaceuta_farmacia (id, rif, nombre, direccion, farmaceuta_id, institucion_id) FROM stdin;
+1	J-5165165165	Farmatodo	Caracas	24211328	\N
+2	J-1651651651	Locatel	Caracas	24211328	\N
+\.
+
+
+--
+-- Name: farmaceuta_farmacia_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.farmaceuta_farmacia_id_seq', 2, true);
+
+
+--
+-- Data for Name: farmaceuta_inventario; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.farmaceuta_inventario (id, cantidad, farmacia_id, medicamento_id) FROM stdin;
+2	0	1	2
+4	1801	2	4
+\.
+
+
+--
+-- Name: farmaceuta_inventario_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.farmaceuta_inventario_id_seq', 4, true);
+
+
+--
+-- Data for Name: farmaceuta_lote; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.farmaceuta_lote (id, f_elaboracion, f_vencimiento, precio, cantidad, activo, inventario_id) FROM stdin;
+1	2018-03-25	2018-05-05	250.00	800	t	4
+2	2018-03-25	2018-05-05	780.00	900	f	4
+3	2018-03-29	2018-07-06	450.00	101	f	4
+\.
+
+
+--
+-- Name: farmaceuta_lote_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.farmaceuta_lote_id_seq', 3, true);
+
+
+--
+-- Data for Name: farmaceuta_medicamento; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.farmaceuta_medicamento (id, nombre, indicacion, posologia, tipo, marca_id) FROM stdin;
+2	Tachipirin	Indicacin	posologia	grajeas	1
+4	Atamel	Indicacion	Posologia	grajeas	1
+\.
+
+
+--
+-- Name: farmaceuta_medicamento_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.farmaceuta_medicamento_id_seq', 4, true);
+
+
+--
+-- Data for Name: medico_especialidad; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_especialidad (nombre_especialidad) FROM stdin;
+\.
+
+
+--
+-- Data for Name: medico_institucion; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_institucion (id, rif, name, address, tipo) FROM stdin;
+1	J-6516516516	Laboratorios Pfizer	Caracas	Laboratorio
+2	J-5168419816	La arboleda	Caracas	Clinica
+\.
+
+
+--
+-- Name: medico_institucion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_institucion_id_seq', 2, true);
+
+
+--
+-- Data for Name: medico_medico; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico (cedula, first_name, last_name, fecha_nacimiento, sexo, estado_civil, telefono, direccion, usuario_id) FROM stdin;
+24211328	Edwar	Yepez	\N	\N	\N	\N	\N	3
+\.
+
+
+--
+-- Data for Name: medico_medico_citas; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico_citas (id, fecha, descripcion, hora, revision, informe, es_referido, especialidad_id, institucion_id, medico_id, paciente_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_medico_citas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_medico_citas_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_medico_especialidad; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico_especialidad (id, horario, especialidad_id, institucion_id, medico_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_medico_especialidad_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_medico_especialidad_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_medico_estudios; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico_estudios (id, titulo, fecha_graduacion, descripcion, institucion, medico_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_medico_estudios_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_medico_estudios_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_medico_eventos; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico_eventos (id, titulo, descripcion, institucion, date, medico_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_medico_eventos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_medico_eventos_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_medico_experiencias; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico_experiencias (id, titulo, descripcion, fecha_inicio, fecha_fin, institucion, medico_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_medico_experiencias_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_medico_experiencias_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_medico_habilidades; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico_habilidades (id, titulo, descripcion, medico_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_medico_habilidades_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_medico_habilidades_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_medico_informe; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico_informe (id, desc_prediagnostico, "medico_Revision_id") FROM stdin;
+\.
+
+
+--
+-- Name: medico_medico_informe_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_medico_informe_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_medico_logros; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico_logros (id, titulo, fecha, descripcion, medico_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_medico_logros_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_medico_logros_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_medico_publicaciones; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico_publicaciones (id, titulo, autores, descripcion, revista, numero, volumen, fecha, medico_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_medico_publicaciones_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_medico_publicaciones_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_medico_revision; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_medico_revision (cita_id, motivos, sintomas, presion_sanguinea_diastolica, presion_sanguinea_sistolica, temperatura, frec_respiratoria, frec_cardiaca, otros) FROM stdin;
+\.
+
+
+--
+-- Data for Name: medico_recipemedico; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_recipemedico (id, paciente_id, medico_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_recipemedico_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_recipemedico_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_recipemedico_medicamentos; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_recipemedico_medicamentos (id, recipemedico_id, medicamento_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_recipemedico_medicamentos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_recipemedico_medicamentos_id_seq', 1, false);
+
+
+--
+-- Data for Name: medico_referencia; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.medico_referencia (id, fecha, descripcion, hora, archivo, cita_id, especialidad_id, institucion_id, medico_id, paciente_id) FROM stdin;
+\.
+
+
+--
+-- Name: medico_referencia_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.medico_referencia_id_seq', 1, false);
+
+
+--
+-- Data for Name: paciente_historia; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.paciente_historia (id, paciente_id, especialidad_id, medico_id) FROM stdin;
+\.
+
+
+--
+-- Name: paciente_historia_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.paciente_historia_id_seq', 1, false);
+
+
+--
+-- Data for Name: paciente_historiadetriaje; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.paciente_historiadetriaje (id, antecedentes_personales, antecedentes_familiares, motivo_consulta, enfermedad_actual, peso, talla, signos_vitales, piel, ojos, fosas_nasales, conductos_auditivos, cavidad_oral, cuello, columna, torax, abdomen, extremidades, genitales, paciente_id, medico_triaje_id) FROM stdin;
+\.
+
+
+--
+-- Name: paciente_historiadetriaje_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ehealth_user
+--
+
+SELECT pg_catalog.setval('public.paciente_historiadetriaje_id_seq', 1, false);
+
+
+--
+-- Data for Name: paciente_paciente; Type: TABLE DATA; Schema: public; Owner: ehealth_user
+--
+
+COPY public.paciente_paciente (cedula, first_name, last_name, fecha_nacimiento, lugar_nacimiento, sexo, estado_civil, ocupacion, direccion, telefono, usuario_id) FROM stdin;
+24211328	Edwar	Yepez	\N	\N	\N	\N	\N	\N	\N	4
+\.
+
+
+--
+-- Name: administrador_inbox_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.administrador_inbox
+    ADD CONSTRAINT administrador_inbox_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: administrador_usuario_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.administrador_usuario
+    ADD CONSTRAINT administrador_usuario_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: administrador_usuario_user_id_key; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.administrador_usuario
+    ADD CONSTRAINT administrador_usuario_user_id_key UNIQUE (user_id);
+
+
+--
+-- Name: auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_group
+    ADD CONSTRAINT auth_group_name_key UNIQUE (name);
+
+
+--
+-- Name: auth_group_permissions_group_id_permission_id_key; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_permission_id_key UNIQUE (group_id, permission_id);
+
+
+--
+-- Name: auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_group
+    ADD CONSTRAINT auth_group_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_permission_content_type_id_codename_key; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_codename_key UNIQUE (content_type_id, codename);
+
+
+--
+-- Name: auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups_user_id_group_id_key; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_group_id_key UNIQUE (user_id, group_id);
+
+
+--
+-- Name: auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user
+    ADD CONSTRAINT auth_user_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions_user_id_permission_id_key; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_permission_id_key UNIQUE (user_id, permission_id);
+
+
+--
+-- Name: auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user
+    ADD CONSTRAINT auth_user_username_key UNIQUE (username);
+
+
+--
+-- Name: django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_content_type_app_label_45f3b1d93ec8c61c_uniq; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.django_content_type
+    ADD CONSTRAINT django_content_type_app_label_45f3b1d93ec8c61c_uniq UNIQUE (app_label, model);
+
+
+--
+-- Name: django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.django_content_type
+    ADD CONSTRAINT django_content_type_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.django_migrations
+    ADD CONSTRAINT django_migrations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.django_session
+    ADD CONSTRAINT django_session_pkey PRIMARY KEY (session_key);
+
+
+--
+-- Name: farmaceuta_farmaceuta_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_farmaceuta
+    ADD CONSTRAINT farmaceuta_farmaceuta_pkey PRIMARY KEY (cedula);
+
+
+--
+-- Name: farmaceuta_farmacia_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_farmacia
+    ADD CONSTRAINT farmaceuta_farmacia_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: farmaceuta_inventario_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_inventario
+    ADD CONSTRAINT farmaceuta_inventario_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: farmaceuta_lote_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_lote
+    ADD CONSTRAINT farmaceuta_lote_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: farmaceuta_medicamento_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_medicamento
+    ADD CONSTRAINT farmaceuta_medicamento_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_especialidad_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_especialidad
+    ADD CONSTRAINT medico_especialidad_pkey PRIMARY KEY (nombre_especialidad);
+
+
+--
+-- Name: medico_institucion_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_institucion
+    ADD CONSTRAINT medico_institucion_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_medico_citas_paciente_id_54e770f96b45c5f8_uniq; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_citas
+    ADD CONSTRAINT medico_medico_citas_paciente_id_54e770f96b45c5f8_uniq UNIQUE (paciente_id, medico_id, institucion_id, fecha);
+
+
+--
+-- Name: medico_medico_citas_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_citas
+    ADD CONSTRAINT medico_medico_citas_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_medico_especialidad_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_especialidad
+    ADD CONSTRAINT medico_medico_especialidad_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_medico_estudios_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_estudios
+    ADD CONSTRAINT medico_medico_estudios_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_medico_eventos_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_eventos
+    ADD CONSTRAINT medico_medico_eventos_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_medico_experiencias_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_experiencias
+    ADD CONSTRAINT medico_medico_experiencias_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_medico_habilidades_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_habilidades
+    ADD CONSTRAINT medico_medico_habilidades_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_medico_informe_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_informe
+    ADD CONSTRAINT medico_medico_informe_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_medico_logros_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_logros
+    ADD CONSTRAINT medico_medico_logros_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_medico_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico
+    ADD CONSTRAINT medico_medico_pkey PRIMARY KEY (cedula);
+
+
+--
+-- Name: medico_medico_publicaciones_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_publicaciones
+    ADD CONSTRAINT medico_medico_publicaciones_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_medico_revision_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_revision
+    ADD CONSTRAINT medico_medico_revision_pkey PRIMARY KEY (cita_id);
+
+
+--
+-- Name: medico_recipemedico_medicamen_recipemedico_id_medicamento_i_key; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_recipemedico_medicamentos
+    ADD CONSTRAINT medico_recipemedico_medicamen_recipemedico_id_medicamento_i_key UNIQUE (recipemedico_id, medicamento_id);
+
+
+--
+-- Name: medico_recipemedico_medicamentos_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_recipemedico_medicamentos
+    ADD CONSTRAINT medico_recipemedico_medicamentos_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_recipemedico_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_recipemedico
+    ADD CONSTRAINT medico_recipemedico_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: medico_referencia_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_referencia
+    ADD CONSTRAINT medico_referencia_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: paciente_historia_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_historia
+    ADD CONSTRAINT paciente_historia_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: paciente_historiadetriaje_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_historiadetriaje
+    ADD CONSTRAINT paciente_historiadetriaje_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: paciente_paciente_pkey; Type: CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_paciente
+    ADD CONSTRAINT paciente_paciente_pkey PRIMARY KEY (cedula);
+
+
+--
+-- Name: administrador_inbox_abfe0f96; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX administrador_inbox_abfe0f96 ON public.administrador_inbox USING btree (usuario_id);
+
+
+--
+-- Name: auth_group_name_253ae2a6331666e8_like; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX auth_group_name_253ae2a6331666e8_like ON public.auth_group USING btree (name varchar_pattern_ops);
+
+
+--
+-- Name: auth_group_permissions_0e939a4f; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX auth_group_permissions_0e939a4f ON public.auth_group_permissions USING btree (group_id);
+
+
+--
+-- Name: auth_group_permissions_8373b171; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX auth_group_permissions_8373b171 ON public.auth_group_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_permission_417f1b1c; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX auth_permission_417f1b1c ON public.auth_permission USING btree (content_type_id);
+
+
+--
+-- Name: auth_user_groups_0e939a4f; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX auth_user_groups_0e939a4f ON public.auth_user_groups USING btree (group_id);
+
+
+--
+-- Name: auth_user_groups_e8701ad4; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX auth_user_groups_e8701ad4 ON public.auth_user_groups USING btree (user_id);
+
+
+--
+-- Name: auth_user_user_permissions_8373b171; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX auth_user_user_permissions_8373b171 ON public.auth_user_user_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_user_user_permissions_e8701ad4; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX auth_user_user_permissions_e8701ad4 ON public.auth_user_user_permissions USING btree (user_id);
+
+
+--
+-- Name: auth_user_username_51b3b110094b8aae_like; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX auth_user_username_51b3b110094b8aae_like ON public.auth_user USING btree (username varchar_pattern_ops);
+
+
+--
+-- Name: django_admin_log_417f1b1c; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX django_admin_log_417f1b1c ON public.django_admin_log USING btree (content_type_id);
+
+
+--
+-- Name: django_admin_log_e8701ad4; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX django_admin_log_e8701ad4 ON public.django_admin_log USING btree (user_id);
+
+
+--
+-- Name: django_session_de54fa62; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX django_session_de54fa62 ON public.django_session USING btree (expire_date);
+
+
+--
+-- Name: django_session_session_key_461cfeaa630ca218_like; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX django_session_session_key_461cfeaa630ca218_like ON public.django_session USING btree (session_key varchar_pattern_ops);
+
+
+--
+-- Name: farmaceuta_farmaceuta_abfe0f96; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX farmaceuta_farmaceuta_abfe0f96 ON public.farmaceuta_farmaceuta USING btree (usuario_id);
+
+
+--
+-- Name: farmaceuta_farmacia_52e1b404; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX farmaceuta_farmacia_52e1b404 ON public.farmaceuta_farmacia USING btree (institucion_id);
+
+
+--
+-- Name: farmaceuta_farmacia_9d692372; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX farmaceuta_farmacia_9d692372 ON public.farmaceuta_farmacia USING btree (farmaceuta_id);
+
+
+--
+-- Name: farmaceuta_inventario_409bac21; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX farmaceuta_inventario_409bac21 ON public.farmaceuta_inventario USING btree (medicamento_id);
+
+
+--
+-- Name: farmaceuta_inventario_6751ea26; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX farmaceuta_inventario_6751ea26 ON public.farmaceuta_inventario USING btree (farmacia_id);
+
+
+--
+-- Name: farmaceuta_lote_f6bd501b; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX farmaceuta_lote_f6bd501b ON public.farmaceuta_lote USING btree (inventario_id);
+
+
+--
+-- Name: farmaceuta_medicamento_bbec06df; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX farmaceuta_medicamento_bbec06df ON public.farmaceuta_medicamento USING btree (marca_id);
+
+
+--
+-- Name: medico_especialidad_nombre_especialidad_2db95e3bd7ad1279_like; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_especialidad_nombre_especialidad_2db95e3bd7ad1279_like ON public.medico_especialidad USING btree (nombre_especialidad varchar_pattern_ops);
+
+
+--
+-- Name: medico_medico_abfe0f96; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_abfe0f96 ON public.medico_medico USING btree (usuario_id);
+
+
+--
+-- Name: medico_medico_citas_52e1b404; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_citas_52e1b404 ON public.medico_medico_citas USING btree (institucion_id);
+
+
+--
+-- Name: medico_medico_citas_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_citas_88edd913 ON public.medico_medico_citas USING btree (medico_id);
+
+
+--
+-- Name: medico_medico_citas_8a03056c; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_citas_8a03056c ON public.medico_medico_citas USING btree (especialidad_id);
+
+
+--
+-- Name: medico_medico_citas_f7989c29; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_citas_f7989c29 ON public.medico_medico_citas USING btree (paciente_id);
+
+
+--
+-- Name: medico_medico_especialida_especialidad_id_5898dcd01e858df4_like; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_especialida_especialidad_id_5898dcd01e858df4_like ON public.medico_medico_especialidad USING btree (especialidad_id varchar_pattern_ops);
+
+
+--
+-- Name: medico_medico_especialidad_52e1b404; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_especialidad_52e1b404 ON public.medico_medico_especialidad USING btree (institucion_id);
+
+
+--
+-- Name: medico_medico_especialidad_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_especialidad_88edd913 ON public.medico_medico_especialidad USING btree (medico_id);
+
+
+--
+-- Name: medico_medico_especialidad_8a03056c; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_especialidad_8a03056c ON public.medico_medico_especialidad USING btree (especialidad_id);
+
+
+--
+-- Name: medico_medico_estudios_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_estudios_88edd913 ON public.medico_medico_estudios USING btree (medico_id);
+
+
+--
+-- Name: medico_medico_eventos_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_eventos_88edd913 ON public.medico_medico_eventos USING btree (medico_id);
+
+
+--
+-- Name: medico_medico_experiencias_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_experiencias_88edd913 ON public.medico_medico_experiencias USING btree (medico_id);
+
+
+--
+-- Name: medico_medico_habilidades_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_habilidades_88edd913 ON public.medico_medico_habilidades USING btree (medico_id);
+
+
+--
+-- Name: medico_medico_informe_cf52be43; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_informe_cf52be43 ON public.medico_medico_informe USING btree ("medico_Revision_id");
+
+
+--
+-- Name: medico_medico_logros_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_logros_88edd913 ON public.medico_medico_logros USING btree (medico_id);
+
+
+--
+-- Name: medico_medico_publicaciones_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_medico_publicaciones_88edd913 ON public.medico_medico_publicaciones USING btree (medico_id);
+
+
+--
+-- Name: medico_recipemedico_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_recipemedico_88edd913 ON public.medico_recipemedico USING btree (medico_id);
+
+
+--
+-- Name: medico_recipemedico_f7989c29; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_recipemedico_f7989c29 ON public.medico_recipemedico USING btree (paciente_id);
+
+
+--
+-- Name: medico_recipemedico_medicamentos_2f77e644; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_recipemedico_medicamentos_2f77e644 ON public.medico_recipemedico_medicamentos USING btree (recipemedico_id);
+
+
+--
+-- Name: medico_recipemedico_medicamentos_409bac21; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_recipemedico_medicamentos_409bac21 ON public.medico_recipemedico_medicamentos USING btree (medicamento_id);
+
+
+--
+-- Name: medico_referencia_52e1b404; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_referencia_52e1b404 ON public.medico_referencia USING btree (institucion_id);
+
+
+--
+-- Name: medico_referencia_7940982d; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_referencia_7940982d ON public.medico_referencia USING btree (cita_id);
+
+
+--
+-- Name: medico_referencia_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_referencia_88edd913 ON public.medico_referencia USING btree (medico_id);
+
+
+--
+-- Name: medico_referencia_8a03056c; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_referencia_8a03056c ON public.medico_referencia USING btree (especialidad_id);
+
+
+--
+-- Name: medico_referencia_f7989c29; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX medico_referencia_f7989c29 ON public.medico_referencia USING btree (paciente_id);
+
+
+--
+-- Name: paciente_historia_88edd913; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX paciente_historia_88edd913 ON public.paciente_historia USING btree (medico_id);
+
+
+--
+-- Name: paciente_historia_8a03056c; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX paciente_historia_8a03056c ON public.paciente_historia USING btree (especialidad_id);
+
+
+--
+-- Name: paciente_historia_f7989c29; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX paciente_historia_f7989c29 ON public.paciente_historia USING btree (paciente_id);
+
+
+--
+-- Name: paciente_historiadetriaje_c7b70f80; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX paciente_historiadetriaje_c7b70f80 ON public.paciente_historiadetriaje USING btree (medico_triaje_id);
+
+
+--
+-- Name: paciente_historiadetriaje_f7989c29; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX paciente_historiadetriaje_f7989c29 ON public.paciente_historiadetriaje USING btree (paciente_id);
+
+
+--
+-- Name: paciente_paciente_abfe0f96; Type: INDEX; Schema: public; Owner: ehealth_user
+--
+
+CREATE INDEX paciente_paciente_abfe0f96 ON public.paciente_paciente USING btree (usuario_id);
+
+
+--
+-- Name: D04e29078e5bb713c0e9b2e05adcf508; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_especialidad
+    ADD CONSTRAINT "D04e29078e5bb713c0e9b2e05adcf508" FOREIGN KEY (especialidad_id) REFERENCES public.medico_especialidad(nombre_especialidad) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: D2b96ca968783269c34671e10c9b3b70; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_referencia
+    ADD CONSTRAINT "D2b96ca968783269c34671e10c9b3b70" FOREIGN KEY (especialidad_id) REFERENCES public.medico_especialidad(nombre_especialidad) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: D5dafb7f71077f43491af3a9e93db393; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_historia
+    ADD CONSTRAINT "D5dafb7f71077f43491af3a9e93db393" FOREIGN KEY (especialidad_id) REFERENCES public.medico_especialidad(nombre_especialidad) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: a16f551c639d91ca812a0db12dbd3eda; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_informe
+    ADD CONSTRAINT a16f551c639d91ca812a0db12dbd3eda FOREIGN KEY ("medico_Revision_id") REFERENCES public.medico_medico_revision(cita_id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: adminis_usuario_id_685b04e32b857390_fk_administrador_usuario_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.administrador_inbox
+    ADD CONSTRAINT adminis_usuario_id_685b04e32b857390_fk_administrador_usuario_id FOREIGN KEY (usuario_id) REFERENCES public.administrador_usuario(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: administrador_usuario_user_id_428c50bf92d4c950_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.administrador_usuario
+    ADD CONSTRAINT administrador_usuario_user_id_428c50bf92d4c950_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_content_type_id_508cf46651277a81_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_content_type_id_508cf46651277a81_fk_django_content_type_id FOREIGN KEY (content_type_id) REFERENCES public.django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_group_permissio_group_id_689710a9a73b7457_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissio_group_id_689710a9a73b7457_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES public.auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_group_permission_id_1f49ccbbdc69d2fc_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permission_id_1f49ccbbdc69d2fc_fk_auth_permission_id FOREIGN KEY (permission_id) REFERENCES public.auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user__permission_id_384b62483d7071f0_fk_auth_permission_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user__permission_id_384b62483d7071f0_fk_auth_permission_id FOREIGN KEY (permission_id) REFERENCES public.auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups_group_id_33ac548dcf5f8e37_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_group_id_33ac548dcf5f8e37_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES public.auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups_user_id_4b5ed4ffdb8fd9b0_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_4b5ed4ffdb8fd9b0_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permiss_user_id_7f0938558328534a_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permiss_user_id_7f0938558328534a_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: djan_content_type_id_697914295151027a_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT djan_content_type_id_697914295151027a_fk_django_content_type_id FOREIGN KEY (content_type_id) REFERENCES public.django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log_user_id_52fdd58701c5f563_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_user_id_52fdd58701c5f563_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: e605e45c35d08d33b8c5fd1c0ddc585e; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_citas
+    ADD CONSTRAINT e605e45c35d08d33b8c5fd1c0ddc585e FOREIGN KEY (especialidad_id) REFERENCES public.medico_especialidad(nombre_especialidad) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: far_medicamento_id_dad7591b170daa5_fk_farmaceuta_medicamento_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_inventario
+    ADD CONSTRAINT far_medicamento_id_dad7591b170daa5_fk_farmaceuta_medicamento_id FOREIGN KEY (medicamento_id) REFERENCES public.farmaceuta_medicamento(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: farm_inventario_id_3d4b22da0eef652e_fk_farmaceuta_inventario_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_lote
+    ADD CONSTRAINT farm_inventario_id_3d4b22da0eef652e_fk_farmaceuta_inventario_id FOREIGN KEY (inventario_id) REFERENCES public.farmaceuta_inventario(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: farmac_institucion_id_4909b2a0f4c857a5_fk_medico_institucion_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_farmacia
+    ADD CONSTRAINT farmac_institucion_id_4909b2a0f4c857a5_fk_medico_institucion_id FOREIGN KEY (institucion_id) REFERENCES public.medico_institucion(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: farmace_usuario_id_3a573f9b75dc979b_fk_administrador_usuario_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_farmaceuta
+    ADD CONSTRAINT farmace_usuario_id_3a573f9b75dc979b_fk_administrador_usuario_id FOREIGN KEY (usuario_id) REFERENCES public.administrador_usuario(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: farmaceu_farmacia_id_401530871df4fefa_fk_farmaceuta_farmacia_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_inventario
+    ADD CONSTRAINT farmaceu_farmacia_id_401530871df4fefa_fk_farmaceuta_farmacia_id FOREIGN KEY (farmacia_id) REFERENCES public.farmaceuta_farmacia(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: farmaceuta_id_4c02176fd799ff70_fk_farmaceuta_farmaceuta_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_farmacia
+    ADD CONSTRAINT farmaceuta_id_4c02176fd799ff70_fk_farmaceuta_farmaceuta_cedula FOREIGN KEY (farmaceuta_id) REFERENCES public.farmaceuta_farmaceuta(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: farmaceuta_m_marca_id_2f3f46201f4e4a69_fk_medico_institucion_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.farmaceuta_medicamento
+    ADD CONSTRAINT farmaceuta_m_marca_id_2f3f46201f4e4a69_fk_medico_institucion_id FOREIGN KEY (marca_id) REFERENCES public.medico_institucion(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: me_medicamento_id_2dd19a9da6a3d0f8_fk_farmaceuta_medicamento_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_recipemedico_medicamentos
+    ADD CONSTRAINT me_medicamento_id_2dd19a9da6a3d0f8_fk_farmaceuta_medicamento_id FOREIGN KEY (medicamento_id) REFERENCES public.farmaceuta_medicamento(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medi_recipemedico_id_2b6e9af5cb2562ce_fk_medico_recipemedico_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_recipemedico_medicamentos
+    ADD CONSTRAINT medi_recipemedico_id_2b6e9af5cb2562ce_fk_medico_recipemedico_id FOREIGN KEY (recipemedico_id) REFERENCES public.medico_recipemedico(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico__usuario_id_30d67f9c368d9665_fk_administrador_usuario_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico
+    ADD CONSTRAINT medico__usuario_id_30d67f9c368d9665_fk_administrador_usuario_id FOREIGN KEY (usuario_id) REFERENCES public.administrador_usuario(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_institucion_id_24394f2e0233836f_fk_medico_institucion_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_citas
+    ADD CONSTRAINT medico_institucion_id_24394f2e0233836f_fk_medico_institucion_id FOREIGN KEY (institucion_id) REFERENCES public.medico_institucion(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_institucion_id_338d84d548ab0d32_fk_medico_institucion_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_especialidad
+    ADD CONSTRAINT medico_institucion_id_338d84d548ab0d32_fk_medico_institucion_id FOREIGN KEY (institucion_id) REFERENCES public.medico_institucion(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_institucion_id_62906ecbf4e39155_fk_medico_institucion_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_referencia
+    ADD CONSTRAINT medico_institucion_id_62906ecbf4e39155_fk_medico_institucion_id FOREIGN KEY (institucion_id) REFERENCES public.medico_institucion(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_medic_cita_id_41a66ab049cb7c56_fk_medico_medico_citas_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_revision
+    ADD CONSTRAINT medico_medic_cita_id_41a66ab049cb7c56_fk_medico_medico_citas_id FOREIGN KEY (cita_id) REFERENCES public.medico_medico_citas(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_medic_medico_id_1259d67abbea7b5a_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_citas
+    ADD CONSTRAINT medico_medic_medico_id_1259d67abbea7b5a_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_medic_medico_id_2e29c16be4aee20b_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_logros
+    ADD CONSTRAINT medico_medic_medico_id_2e29c16be4aee20b_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_medic_medico_id_335154bb75d77469_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_especialidad
+    ADD CONSTRAINT medico_medic_medico_id_335154bb75d77469_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_medic_medico_id_382b72d9ca5c745a_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_eventos
+    ADD CONSTRAINT medico_medic_medico_id_382b72d9ca5c745a_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_medic_medico_id_3b5bddb0aadee27d_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_experiencias
+    ADD CONSTRAINT medico_medic_medico_id_3b5bddb0aadee27d_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_medic_medico_id_6cbdd6b5362580bf_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_estudios
+    ADD CONSTRAINT medico_medic_medico_id_6cbdd6b5362580bf_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_medic_medico_id_77810f19d140c0a3_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_publicaciones
+    ADD CONSTRAINT medico_medic_medico_id_77810f19d140c0a3_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_medico_medico_id_fd27608e2e9385a_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_habilidades
+    ADD CONSTRAINT medico_medico_medico_id_fd27608e2e9385a_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_paciente_id_106bf2302ca399e8_fk_paciente_paciente_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_medico_citas
+    ADD CONSTRAINT medico_paciente_id_106bf2302ca399e8_fk_paciente_paciente_cedula FOREIGN KEY (paciente_id) REFERENCES public.paciente_paciente(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_paciente_id_2bda8e71c51dd95e_fk_paciente_paciente_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_referencia
+    ADD CONSTRAINT medico_paciente_id_2bda8e71c51dd95e_fk_paciente_paciente_cedula FOREIGN KEY (paciente_id) REFERENCES public.paciente_paciente(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_paciente_id_44d1745f7d4e1fc3_fk_paciente_paciente_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_recipemedico
+    ADD CONSTRAINT medico_paciente_id_44d1745f7d4e1fc3_fk_paciente_paciente_cedula FOREIGN KEY (paciente_id) REFERENCES public.paciente_paciente(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_recipe_medico_id_3343000b1ddc0f5_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_recipemedico
+    ADD CONSTRAINT medico_recipe_medico_id_3343000b1ddc0f5_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_refer_cita_id_3b72417d0efc52d2_fk_medico_medico_citas_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_referencia
+    ADD CONSTRAINT medico_refer_cita_id_3b72417d0efc52d2_fk_medico_medico_citas_id FOREIGN KEY (cita_id) REFERENCES public.medico_medico_citas(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: medico_refere_medico_id_a80fa2467963f1c_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.medico_referencia
+    ADD CONSTRAINT medico_refere_medico_id_a80fa2467963f1c_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: pacie_medico_triaje_id_6f7a5290116abcf2_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_historiadetriaje
+    ADD CONSTRAINT pacie_medico_triaje_id_6f7a5290116abcf2_fk_medico_medico_cedula FOREIGN KEY (medico_triaje_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: pacien_paciente_id_4204518ab591f46d_fk_paciente_paciente_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_historiadetriaje
+    ADD CONSTRAINT pacien_paciente_id_4204518ab591f46d_fk_paciente_paciente_cedula FOREIGN KEY (paciente_id) REFERENCES public.paciente_paciente(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: pacient_usuario_id_777946e2283ac0a7_fk_administrador_usuario_id; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_paciente
+    ADD CONSTRAINT pacient_usuario_id_777946e2283ac0a7_fk_administrador_usuario_id FOREIGN KEY (usuario_id) REFERENCES public.administrador_usuario(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: paciente_his_medico_id_6a594c8b4d4c88af_fk_medico_medico_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_historia
+    ADD CONSTRAINT paciente_his_medico_id_6a594c8b4d4c88af_fk_medico_medico_cedula FOREIGN KEY (medico_id) REFERENCES public.medico_medico(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: paciente_paciente_id_54770f849cfbb1_fk_paciente_paciente_cedula; Type: FK CONSTRAINT; Schema: public; Owner: ehealth_user
+--
+
+ALTER TABLE ONLY public.paciente_historia
+    ADD CONSTRAINT paciente_paciente_id_54770f849cfbb1_fk_paciente_paciente_cedula FOREIGN KEY (paciente_id) REFERENCES public.paciente_paciente(cedula) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
