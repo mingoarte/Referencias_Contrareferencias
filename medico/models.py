@@ -168,6 +168,8 @@ class RecipeMedico(models.Model):
     medico = models.ForeignKey(Medico,null=True)
     medicamentos = models.ManyToManyField(Medicamento)
     paciente = models.ForeignKey(Paciente)
+    fecha = models.DateField()
+    indicaciones = models.TextField(max_length=500)
 
 
 class Referencia(models.Model):
