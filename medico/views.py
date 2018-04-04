@@ -1399,7 +1399,7 @@ class AgregarRecipe(CreateView):
         form = RecipeForm(request.POST)
         if form.is_valid():
             form.save()
-
+            return HttpResponseRedirect(reverse_lazy('ver_recipes'))
         else:
             messages.error(request,"Por favor verifique los campos suguientes:")
             return render_to_response('medico/agregar_recipe.html',

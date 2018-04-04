@@ -448,3 +448,4 @@ class RecipeForm(forms.ModelForm):
     class Meta:
         model = RecipeMedico
         fields = "__all__"
+
