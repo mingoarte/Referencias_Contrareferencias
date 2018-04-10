@@ -6,11 +6,114 @@ from  medico.controllers import *
 from  medico.models import *
 from  paciente.models import *
 from django.test.client import RequestFactory
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoAlertPresentException
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from django.core.urlresolvers import reverse
+from django.core.management import call_command
+import unittest, time, re
+
+class SeleniumTestsSprint4(StaticLiveServerTestCase):
+
+    def setUp(self):
+        # Usar fixture para tener datos en la db
+        call_command('loaddata', 'fixtures/new.json', verbosity=0)
+
+        self.driver = webdriver.Firefox()
+        self.driver.get('%s' % (self.live_server_url))
+
+        # Medico login
+        self.login_button = self.driver.find_element_by_css_selector("input[type='submit']")
+        self.username = self.driver.find_element_by_css_selector("input[name='username']")
+        self.password = self.driver.find_element_by_css_selector("input[name='password']")
+        self.username.send_keys("edwar_m")
+        self.password.send_keys("12345")
+        self.login_button.send_keys(Keys.RETURN)
+
+        time.sleep(1)
+
+    def tearDown(self):
+        self.driver.close()
+
+    def open(self, url):
+        self.driver.get("%s%s" % (self.live_server_url, url))
+
+class TestVerRecipes(SeleniumTestsSprint4):
+
+    def runTest(self):
+        self.open(reverse('ver_recipes'))
+        self.assertTrue(u"Gestión de Récipes Médicos" in self.driver.page_source)
+
+class TestAgregarRecipes(SeleniumTestsSprint4):
+
+    def runTest(self):
+        self.open(reverse('agregar_recipe'))
+
+        self.driver.find_element_by_css_selector("input[name='fecha']").send_keys("2018-04-10")
+        Select(self.driver.find_element_by_css_selector("select[name='medico']")).select_by_visible_text(u"24211328 Edwar Yepez") 
+        Select(self.driver.find_element_by_css_selector("select[name='paciente']")).select_by_visible_text(u"24211328 Edwar Yepez")            
+        Select(self.driver.find_element_by_css_selector("select[name='medicamentos']")).select_by_visible_text(u"Atamel")
+        self.driver.find_element_by_css_selector("textarea[name='indicaciones']").send_keys("Indicaciones del recipe medico")
+
+        self.driver.find_element_by_css_selector("#id_submit").click()
+
+        time.sleep(1)
+
+        self.assertTrue(u"Atamel" in self.driver.page_source)
+
+class TestModificarrRecipes(SeleniumTestsSprint4):
+
+    def runTest(self):
+        self.open(reverse('agregar_recipe'))
+
+        self.driver.find_element_by_css_selector("input[name='fecha']").send_keys("2018-04-10")
+        Select(self.driver.find_element_by_css_selector("select[name='medico']")).select_by_visible_text(u"24211328 Edwar Yepez") 
+        Select(self.driver.find_element_by_css_selector("select[name='paciente']")).select_by_visible_text(u"24211328 Edwar Yepez")            
+        Select(self.driver.find_element_by_css_selector("select[name='medicamentos']")).select_by_visible_text(u"Atamel")
+        self.driver.find_element_by_css_selector("textarea[name='indicaciones']").send_keys("Indicaciones del recipe medico")
+
+        self.driver.find_element_by_css_selector("#id_submit").click()
+
+        time.sleep(1)
+
+        self.driver.find_element_by_css_selector("i.fa-pencil").click()
+        self.driver.find_element_by_css_selector("textarea[name='indicaciones']").clear()
+        self.driver.find_element_by_css_selector("textarea[name='indicaciones']").send_keys("Indicaciones del nuevas recipe medico")
+        self.driver.find_element_by_css_selector("#id_submit").click()
+
+        self.assertTrue(u"nuevas" in self.driver.page_source)
+
+class TestEliminarRecipes(SeleniumTestsSprint4):
+
+    def runTest(self):
+        self.open(reverse('agregar_recipe'))
+
+        self.driver.find_element_by_css_selector("input[name='fecha']").send_keys("2018-04-10")
+        Select(self.driver.find_element_by_css_selector("select[name='medico']")).select_by_visible_text(u"24211328 Edwar Yepez") 
+        Select(self.driver.find_element_by_css_selector("select[name='paciente']")).select_by_visible_text(u"24211328 Edwar Yepez")            
+        Select(self.driver.find_element_by_css_selector("select[name='medicamentos']")).select_by_visible_text(u"Atamel")
+        self.driver.find_element_by_css_selector("textarea[name='indicaciones']").send_keys("Indicaciones del recipe medico")
+
+        self.driver.find_element_by_css_selector("#id_submit").click()
+
+        time.sleep(1)
+        
+        self.driver.find_element_by_css_selector("i.fa-trash").click()
+        self.driver.find_element_by_css_selector("a.btn-primary").click()
+
+        self.assertTrue(u"Atamel" not in self.driver.page_source)
+
+
 
 #####################################################################
 #                 			CONTROLADORES
 #####################################################################
 
+@unittest.skip("Verificada")
 class MedicoTestCase(TestCase):
 
     def setUp(self):
@@ -847,3 +950,6 @@ class MedicoTestCase(TestCase):
                                 recipe = recipe_medico)
 
     	self.assertIs(value, True)
+
+if __name__ == '__main__':
+    unittest.main()
